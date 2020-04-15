@@ -5,6 +5,13 @@ module.exports = {
     author: `@gatsbyjs`,
   },
   plugins: [
+    `gatsby-plugin-page-transitions`,
+    {
+      resolve: "gatsby-plugin-page-transitions",
+      options: {
+        transitionTime: 3000,
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
