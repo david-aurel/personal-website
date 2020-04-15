@@ -3,7 +3,7 @@ const express = require("express")
 const ses = require("./ses.js")
 const app = express()
 
-app.get("/test", (req, res) => {
+app.get("/api/test", (req, res) => {
   console.log("test hit")
   res.send({ test: "success" })
 })
