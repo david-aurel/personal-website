@@ -8,7 +8,7 @@ const Header = ({ siteTitle }) => (
     <div className="flex-header">
       <div className="title">
         <h1>
-          <Link to="/">{siteTitle}</Link>
+          <Link to="/">{siteTitle},</Link>
         </h1>
         <h3>frontend engineer.</h3>
       </div>

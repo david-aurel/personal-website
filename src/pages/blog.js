@@ -8,7 +8,7 @@ import Blog from "../components/blog"
 
 const blogPage = () => (
   <PageTransition>
-    <SEO title="Portfolio" />
+    <SEO title="Blog" />
     <p>blog</p>
     <Link to="/">Go back to the homepage</Link>
   </PageTransition>

@@ -1,7 +1,16 @@
 import React from "react"
 import axios from "axios"
+import { Link } from "gatsby"
+import PageTransition from "gatsby-plugin-page-transitions"
+import SEO from "../components/seo"
+import Contact from "../components/blog"
 
-const contactPage = ({ data }) => {
+const contactPage = ({ data }) => (
+  <PageTransition>
+    <SEO title="Contact" />
+    <p>contact</p>
+    <Link to="/">Go back to the homepage</Link>
+  </PageTransition>
   // const [name, setName] = useState("")
   // const [email, setEmail] = useState("")
   // const [subject, setSubject] = useState("")
@@ -56,74 +65,73 @@ const contactPage = ({ data }) => {
   //   }
   // }
 
-  return (
-    <p>Contact</p>
-    //   <div className="page contact">
-    //     <div className="contact">
-    //       <div className="contact-card">
-    //         <ul>
-    //           {/* {data.map((el, idx) => {
-    //             return (
-    //               <li key={idx}>
-    //                 <a href={el.url} target="_blank" rel="noopener noreferrer">
-    //                   <img src={el.imgUrl} alt="" />
-    //                   <p>{el.value}</p>
-    //                 </a>
-    //               </li>
-    //             )
-    //           })} */}
-    //         </ul>
-    //       </div>
-    //       <div className="contact-form">
-    //         {/* {serverError && (
-    //                       <h4 className='error'>
-    //                           {`${serverError.statusCode} - ${serverError.message}`}
-    //                       </h4>
-    //                   )}
-    //                   {userError && <h4 className='error'>{userError}</h4>}
-    //                   {loading && <h4>Loading...</h4>}
-    //                   {success && <h4 className='success'>Success!</h4>}
-    //                   {!userError && !serverError && !success && (
-    //                       <h4>...Or write me here!</h4>
-    //                   )} */}
-    //         <h4 className={success ? "success" : "" || error ? "error" : ""}>
-    //           {formInfo}
-    //         </h4>
+  // return (
+  //   <div className="page contact">
+  //     <div className="contact">
+  //       <div className="contact-card">
+  //         <ul>
+  //           {/* {data.map((el, idx) => {
+  //             return (
+  //               <li key={idx}>
+  //                 <a href={el.url} target="_blank" rel="noopener noreferrer">
+  //                   <img src={el.imgUrl} alt="" />
+  //                   <p>{el.value}</p>
+  //                 </a>
+  //               </li>
+  //             )
+  //           })} */}
+  //         </ul>
+  //       </div>
+  //       <div className="contact-form">
+  //         {/* {serverError && (
+  //                       <h4 className='error'>
+  //                           {`${serverError.statusCode} - ${serverError.message}`}
+  //                       </h4>
+  //                   )}
+  //                   {userError && <h4 className='error'>{userError}</h4>}
+  //                   {loading && <h4>Loading...</h4>}
+  //                   {success && <h4 className='success'>Success!</h4>}
+  //                   {!userError && !serverError && !success && (
+  //                       <h4>...Or write me here!</h4>
+  //                   )} */}
+  //         <h4 className={success ? "success" : "" || error ? "error" : ""}>
+  //           {formInfo}
+  //         </h4>
 
-    //         <div className="form-sender">
-    //           <input
-    //             type="text"
-    //             name="name"
-    //             id="name"
-    //             placeholder="name"
-    //             onChange={e => setName(e.target.value)}
-    //           />
-    //           <input
-    //             type="email"
-    //             name="email"
-    //             id="email"
-    //             placeholder="email"
-    //             onChange={e => setEmail(e.target.value)}
-    //           />
-    //         </div>
-    //         <input
-    //           type="text"
-    //           name="subject"
-    //           id="subject"
-    //           placeholder="subject"
-    //           onChange={e => setSubject(e.target.value)}
-    //         />
-    //         <textarea
-    //           name="message"
-    //           id="message"
-    //           placeholder="message"
-    //           onChange={e => setMessage(e.target.value)}
-    //         ></textarea>
-    //         <button onClick={sendEmail}>submit</button>
-    //       </div>
-    //     </div>
-    //   </div>
-  )
-}
+  //         <div className="form-sender">
+  //           <input
+  //             type="text"
+  //             name="name"
+  //             id="name"
+  //             placeholder="name"
+  //             onChange={e => setName(e.target.value)}
+  //           />
+  //           <input
+  //             type="email"
+  //             name="email"
+  //             id="email"
+  //             placeholder="email"
+  //             onChange={e => setEmail(e.target.value)}
+  //           />
+  //         </div>
+  //         <input
+  //           type="text"
+  //           name="subject"
+  //           id="subject"
+  //           placeholder="subject"
+  //           onChange={e => setSubject(e.target.value)}
+  //         />
+  //         <textarea
+  //           name="message"
+  //           id="message"
+  //           placeholder="message"
+  //           onChange={e => setMessage(e.target.value)}
+  //         ></textarea>
+  //         <button onClick={sendEmail}>submit</button>
+  //       </div>
+  //     </div>
+  //   </div>
+  // )
+)
 
 export default contactPage

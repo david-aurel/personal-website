@@ -1,8 +1,10 @@
 /* general */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
   color: var(--blue);
 }
 :root {
@@ -81,16 +83,16 @@ video {
 }
 
 .title h1 a {
-  font-weight: 200;
-  letter-spacing: -1px;
-  color: var(--red);
+  font-weight: 300;
+  /* letter-spacing: -1px; */
+  /* color: var(--red); */
   text-decoration: none;
   font-size: min(6.9vw, 36px);
 }
 
 .title h3 {
   font-weight: 200;
-  color: var(--red);
+  /* color: var(--red); */
   font-size: min(4.1vw, 22px);
   margin: 4px 4px 0 0;
 }
@@ -121,7 +123,7 @@ nav {
   position: absolute;
   bottom: 0;
   height: 2px;
-  background: var(--yellow);
+  background: var(--green);
 }
 
 .slider-portfolio {
