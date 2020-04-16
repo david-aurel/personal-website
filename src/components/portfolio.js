@@ -4,11 +4,11 @@ const Portfolio = ({ data }) => {
   return (
     <div className="portfolioWrapper">
       {data.map((el, id) => {
+        el = el.node.frontmatter
         return (
-          <Link to={`/portfolio/${el.node.path}`} key={id}>
-            <p>{el.node.title}</p>
-            <p>{el.node.description}</p>
-            {/* <img src={el.thumbnail} alt="" /> */}
+          <Link to={`${el.path}`} key={id}>
+            <p>{el.title}</p>
+            <p>{el.description}</p>
           </Link>
         )
       })}

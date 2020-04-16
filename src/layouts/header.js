@@ -10,7 +10,7 @@ const Header = ({ siteTitle }) => (
         <h1>
           <Link to="/">{siteTitle},</Link>
         </h1>
-        <h3>frontend engineer.</h3>
+        <h3>frontend enthusiast.</h3>
       </div>
       <a href="/animation">
         <Animation />

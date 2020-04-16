@@ -1,17 +1,36 @@
 import React from "react"
 import { Link } from "gatsby"
+import { Router } from "@reach/router"
 import PageTransition from "gatsby-plugin-page-transitions"
-
 import SEO from "../components/seo"
-// import Layout from "../components/layout"
+
 import Blog from "../components/blog"
 
-const blogPage = () => (
-  <PageTransition>
-    <SEO title="Blog" />
-    <p>blog</p>
-    <Link to="/">Go back to the homepage</Link>
-  </PageTransition>
-)
+const blogPage = ({ data }) => {
+  data = data.allMarkdownRemark.edges
+
+  return (
+    <PageTransition>
+      <SEO title="Blog" />
+      <Blog data={data} />
+    </PageTransition>
+  )
+}
 
 export default blogPage
+
+export const query = graphql`
+  query BlogInfo {
+    allMarkdownRemark(filter: { frontmatter: { path: { regex: "/blog/" } } }) {
+      edges {
+        node {
+          frontmatter {
+            description
+            title
+            path
+          }
+        }
+      }
+    }
+  }
+`

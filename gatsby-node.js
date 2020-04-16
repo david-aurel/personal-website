@@ -9,6 +9,7 @@ const path = require(`path`)
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
   const portfolioTemplate = path.resolve(`src/templates/portfolioTemplate.js`)
+  const blogTemplate = path.resolve(`src/templates/blogTemplate.js`)
   const result = await graphql(`
     {
       allMarkdownRemark(limit: 1000) {
@@ -22,6 +23,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       }
     }
   `)
+
   // Handle errors
   if (result.errors) {
     reporter.panicOnBuild(`Error while running GraphQL query.`)
@@ -30,7 +32,10 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
       path: node.frontmatter.path,
-      component: portfolioTemplate,
+      component:
+        node.frontmatter.path.split("/")[1] === "blog"
+          ? blogTemplate
+          : portfolioTemplate,
       context: {}, // additional data can be passed via context
     })
   })

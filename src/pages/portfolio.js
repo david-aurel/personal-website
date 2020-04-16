@@ -5,17 +5,14 @@ import PageTransition from "gatsby-plugin-page-transitions"
 import SEO from "../components/seo"
 
 import Portfolio from "../components/portfolio"
-import PortfolioCard from "../components/portfolioCard"
 
 const portfolioPage = ({ data }) => {
-  data = data.allPortfolioInfoJson.edges
+  data = data.allMarkdownRemark.edges
+
   return (
     <PageTransition>
       <SEO title="Portfolio" />
-      <Router>
-        <Portfolio path="/portfolio" data={data} />
-        <PortfolioCard path="/portfolio/:name" />
-      </Router>
+      <Portfolio data={data} />
     </PageTransition>
   )
 }
@@ -23,13 +20,17 @@ const portfolioPage = ({ data }) => {
 export default portfolioPage
 
 export const query = graphql`
-  query MyQuery {
-    allPortfolioInfoJson {
+  query PortfolioInfo {
+    allMarkdownRemark(
+      filter: { frontmatter: { path: { regex: "/portfolio/" } } }
+    ) {
       edges {
         node {
-          title
-          description
-          path
+          frontmatter {
+            description
+            title
+            path
+          }
         }
       }
     }
