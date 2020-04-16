@@ -4,8 +4,6 @@ import { Link } from "gatsby"
 const Nav = ({ initSlider }) => {
   const [sliderState, setSliderState] = useState("")
   useEffect(() => {
-    console.log("initSlider", initSlider, initSlider === "")
-
     initSlider === ""
       ? setSliderState("slider-portfolio")
       : setSliderState(`slider-${initSlider}`)

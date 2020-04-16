@@ -2,6 +2,10 @@ import React from "react"
 // import { Link, useParams } from 'react-router-dom';
 
 const PortfolioCard = ({ data, changeAnimation }) => {
+  console.log(data)
+
+  return <div>test</div>
+
   // const { project } = useParams();
   // data = data[project];
   // const bulletPoints = () => {
