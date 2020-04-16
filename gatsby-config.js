@@ -12,7 +12,6 @@ module.exports = {
         transitionTime: 500,
       },
     },
-    // [`gatsby-plugin-layout`],
     {
       resolve: `gatsby-plugin-layout`,
       options: {
@@ -20,11 +19,12 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-json`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        name: `content`,
+        path: `${__dirname}/content`,
       },
     },
     `gatsby-transformer-sharp`,

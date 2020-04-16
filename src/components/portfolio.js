@@ -1,51 +1,18 @@
-import React, { useState, useEffect } from "react"
-// import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
-// import { CSSTransition, TransitionGroup } from "react-transition-group"
-import PortfolioCard from "./portfolioCard"
-import PortfolioNav from "./portfolioNav"
-
-const Portfolio = ({ data, location }) => {
-  const [animationClassName, setAnimationClassName] = useState("slide")
-  const changeAnimation = direction => {
-    setAnimationClassName(direction)
-  }
+import React from "react"
+import { Link } from "gatsby"
+const Portfolio = ({ data }) => {
   return (
-    // <Router>
-    //     <Route
-    //         render={({ location }) => (
-    //             <TransitionGroup
-    //                 className='portfolioWrapper'
-    //                 childFactory={child =>
-    //                     React.cloneElement(child, {
-    //                         classNames: animationClassName
-    //                     })
-    //                 }
-    //             >
-    //                 <CSSTransition
-    //                     key={location.key}
-    //                     timeout={500}
-    //                     classNames={animationClassName}
-    //                 >
-    //                     <Switch location={location}>
-    //                         <Route exact path='/portfolio'>
-    //                             <PortfolioNav
-    //                                 data={data}
-    //                                 changeAnimation={changeAnimation}
-    //                             />
-    //                         </Route>
-    //                         <Route path='/portfolio/:project'>
-    //                             <PortfolioCard
-    //                                 data={data}
-    //                                 changeAnimation={changeAnimation}
-    //                             />
-    //                         </Route>
-    //                     </Switch>
-    //                 </CSSTransition>
-    //             </TransitionGroup>
-    //         )}
-    //     />
-    // </Router>
-    null
+    <div className="portfolioWrapper">
+      {data.map((el, id) => {
+        return (
+          <Link to={`/portfolio/${el.node.path}`} key={id}>
+            <p>{el.node.title}</p>
+            <p>{el.node.description}</p>
+            {/* <img src={el.thumbnail} alt="" /> */}
+          </Link>
+        )
+      })}
+    </div>
   )
 }
 

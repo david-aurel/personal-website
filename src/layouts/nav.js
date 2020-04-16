@@ -12,7 +12,6 @@ const Nav = ({ initSlider }) => {
   }, [initSlider])
   return (
     <nav>
-      <p>{initSlider}</p>
       <div className="navLinks">
         <div className={`slider ${sliderState}`}></div>
 
