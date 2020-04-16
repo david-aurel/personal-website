@@ -91,7 +91,7 @@ video {
 }
 
 .title h3 {
-  font-weight: 200;
+  font-weight: 400;
   /* color: var(--red); */
   font-size: min(4.1vw, 22px);
   margin: 4px 4px 0 0;
