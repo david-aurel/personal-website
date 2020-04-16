@@ -215,7 +215,7 @@ main p {
   justify-content: space-between;
 }
 
-.portfolioNav a {
+.portfolioThumb {
   display: flex;
   flex-direction: column;
   justify-content: space-between;

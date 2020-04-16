@@ -2,6 +2,7 @@
 title: "Social Network"
 description: "A place to connect, chat and have fun with you friends."
 path: "/portfolio/social-network"
+thumbnail: "social_network.jpg"
 ---
 
 This was the first time using React and I loved it! It was a challenge to wrap my head around, especially later on when I started using Redux and Sockets, but it was so much fun and I'm very happy with how it turned out. When it came to design, I styled it from scratch and mobile first. May or may not look familiar, but sometimes the smartest thing you can do is a master copy, right?
