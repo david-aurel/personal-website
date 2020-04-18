@@ -27,9 +27,8 @@ const Nav = ({ initSlider }) => {
                 to={`/${minItem}`}
                 onClick={() => {
                     setSliderState(`slider-${minItem}`)
-                    toggleHamburger()
+                    setHamburgerState(false)
                 }}
-                tabIndex={hamburgerState ? 0 : -1}
             >
                 {upperCaseItem}
             </Link>
@@ -38,8 +37,6 @@ const Nav = ({ initSlider }) => {
 
     return (
         <nav className={hamburgerState ? 'expand' : ''}>
-            <div className={`slider ${sliderState}`}></div>
-
             <button
                 className={`hamburger ${hamburgerState ? 'on' : ''}`}
                 onClick={() => {
@@ -49,7 +46,10 @@ const Nav = ({ initSlider }) => {
                 animation={animation ? 1 : 0}
             />
 
-            <div className="navItems">{navItems}</div>
+            <div className="navItems">
+                <div className={`slider ${sliderState}`} />
+                {navItems}
+            </div>
         </nav>
     )
 }
