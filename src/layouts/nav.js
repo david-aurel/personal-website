@@ -1,65 +1,57 @@
-import React, { useState, useEffect } from "react"
-import { Link } from "gatsby"
+import React, { useState, useEffect } from 'react'
+import { Link } from 'gatsby'
 
 const Nav = ({ initSlider }) => {
-  const [sliderState, setSliderState] = useState("")
+    const [sliderState, setSliderState] = useState('')
+    const [hamburgerState, setHamburgerState] = useState(false)
+    const [animation, setAnimation] = useState(false)
 
-  useEffect(() => {
-    initSlider === ""
-      ? setSliderState("slider-portfolio")
-      : setSliderState(`slider-${initSlider}`)
-  }, [initSlider])
+    useEffect(() => {
+        initSlider === ''
+            ? setSliderState('slider-portfolio')
+            : setSliderState(`slider-${initSlider}`)
+    }, [initSlider])
 
-  return (
-    <nav>
-      <div className="navLinks">
-        <div className={`slider ${sliderState}`}></div>
+    const toggleHamburger = () => {
+        setHamburgerState(!hamburgerState)
+        setAnimation(!animation)
+    }
 
-        <p className="navLink">
-          <Link
-            to="/portfolio"
-            onClick={() => {
-              setSliderState("slider-portfolio")
-            }}
-          >
-            Portfolio
-          </Link>
-        </p>
-        <p className="navLink">
-          <Link
-            to="/blog"
-            onClick={() => {
-              setSliderState("slider-blog")
-            }}
-          >
-            Blog
-          </Link>
-        </p>
+    const nav = ['portfolio', 'blog', 'about me', 'contact']
+    const navItems = nav.map((item, i) => {
+        const minItem = item.split(' ')[0]
+        const upperCaseItem = item.charAt(0).toUpperCase() + item.slice(1)
+        return (
+            <Link
+                key={i}
+                to={`/${minItem}`}
+                onClick={() => {
+                    setSliderState(`slider-${minItem}`)
+                    toggleHamburger()
+                }}
+                tabIndex={hamburgerState ? 0 : -1}
+            >
+                {upperCaseItem}
+            </Link>
+        )
+    })
 
-        <p className="navLink">
-          <Link
-            to="/about"
-            onClick={() => {
-              setSliderState("slider-about")
-            }}
-          >
-            About me
-          </Link>
-        </p>
+    return (
+        <nav className={hamburgerState ? 'expand' : ''}>
+            <div className={`slider ${sliderState}`}></div>
 
-        <p className="navLink">
-          <Link
-            to="/contact"
-            onClick={() => {
-              setSliderState("slider-contact")
-            }}
-          >
-            Contact
-          </Link>
-        </p>
-      </div>
-    </nav>
-  )
+            <button
+                className={`hamburger ${hamburgerState ? 'on' : ''}`}
+                onClick={() => {
+                    toggleHamburger()
+                }}
+                tabIndex="0"
+                animation={animation ? 1 : 0}
+            />
+
+            <div className="navItems">{navItems}</div>
+        </nav>
+    )
 }
 
 export default Nav

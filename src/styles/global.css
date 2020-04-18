@@ -1,0 +1,99 @@
+/* general */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --mainColor: #020289;
+    --hamburgerItemsSize: 1.5rem;
+}
+
+body {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#gatsby-focus-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* navbar */
+nav {
+    position: relative;
+    height: 50px;
+    transition: height 300ms;
+}
+.navItems {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 300ms;
+}
+nav a {
+    opacity: 0;
+    text-decoration: none;
+    color: var(--mainColor);
+    font-size: var(--hamburgerItemsSize);
+    font-weight: 500;
+    margin: 15px 0;
+    transition: opacity 300ms;
+}
+.hamburger {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 30px;
+    background: url('../../public/icons/hamburger.svg') center / contain
+        no-repeat;
+    border: none;
+}
+.hamburger.on {
+    background: url('../../public/icons/exit.svg') center / contain no-repeat;
+}
+nav.expand {
+    height: 100vh;
+}
+nav.expand a {
+    opacity: 1;
+}
+nav.expand .navItems {
+    padding-top: 30%;
+}
+
+.hamburger[animation='1'] {
+    animation: hamburgerIn 150ms;
+}
+.hamburger[animation='0'] {
+    animation: hamburgerOut 150ms;
+}
+
+@keyframes hamburgerIn {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes hamburgerOut {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
