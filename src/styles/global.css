@@ -11,12 +11,13 @@
     --mainColor: #020289;
     --hamburgerItemsSize: 1.5rem;
     --navItemsSize: 1.2rem;
+    --mediaQuery: 500px;
 }
 
 body {
     max-width: 800px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 0 20px 20px 20px;
 }
 
 #gatsby-focus-wrapper {
@@ -25,11 +26,29 @@ body {
     flex-direction: column;
 }
 
+/* general desktop media query */
+@media (min-width: 500px) {
+    .page {
+        margin-top: 50px;
+    }
+}
+/* general font sizes etc. */
+.italic {
+    font-style: italic;
+}
+.bold {
+    font-weight: 500;
+}
+.subtitle {
+    font-size: 1.3rem;
+}
+
 /* nav styles for mobile */
 nav {
     position: relative;
     height: 50px;
     transition: height 300ms;
+    margin-top: 20px;
 }
 .navItems {
     display: flex;
@@ -106,7 +125,7 @@ nav.expand .navItems {
 }
 
 /* nav media query for desktop */
-@media (min-width: 600px) {
+@media (min-width: 500px) {
     .hamburger {
         display: none;
     }
@@ -141,7 +160,7 @@ nav.expand .navItems {
         bottom: 0;
         height: 2px;
         background: var(--mainColor);
-        transition: 500ms;
+        transition: 300ms;
     }
     .slider-portfolio {
         width: 21%;
@@ -158,5 +177,50 @@ nav.expand .navItems {
     .slider-contact {
         width: 18.9%;
         margin-left: 81.3%;
+    }
+}
+
+/* about me */
+.about,
+.about-text-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.about .gatsby-image-wrapper {
+    border-radius: 50%;
+    width: 100%;
+    margin: 15px 0 30px 0;
+}
+.about h1 {
+    margin-bottom: 10px;
+}
+.about p:first-of-type {
+    margin-bottom: 25px;
+}
+.about p:last-of-type {
+    line-height: 1.8rem;
+}
+
+/* about me media query desktop */
+@media (min-width: 500px) {
+    .about {
+        flex-direction: row;
+    }
+    .about p {
+        margin-bottom: 0;
+    }
+    .about .gatsby-image-wrapper {
+        min-height: 200px;
+        min-width: 200px;
+        max-height: 200px;
+        max-width: 200px;
+        margin: 0 80px 0 0;
+    }
+    .about-text-wrapper {
+        justify-content: space-between;
+        padding: 10px 0;
+    }
+    .about p:last-of-type {
+        line-height: 2rem;
     }
 }
