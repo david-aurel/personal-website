@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
 const Contact = () => {
@@ -7,19 +7,21 @@ const Contact = () => {
     const [error, setError] = useState(false)
     const [formInfo, setFormInfo] = useState('')
 
+    useEffect(() => {}, [success, error])
     const handleChange = ({ target }) =>
         setInput({ ...input, [target.name]: target.value })
 
     const sendEmail = async () => {
         setError(false)
+
         if (!input.name) {
-            return setFormInfo('Please provide a name')
+            return setFormInfo('* Please provide a name')
         } else if (!/^.+@.+\..+$/.test(input.email)) {
-            return setFormInfo('Please provide a valid email')
+            return setFormInfo('* Please provide a valid email')
         } else if (!input.subject) {
-            return setFormInfo('Please provide a subject line')
+            return setFormInfo('* Please provide a subject line')
         } else if (!input.message) {
-            return setFormInfo('Please provide a message')
+            return setFormInfo('* Please provide a message')
         } else {
             setFormInfo('Sending...')
         }
@@ -32,26 +34,42 @@ const Contact = () => {
             setSuccess(true)
             setFormInfo('Success!')
         } catch (err) {
-            setSuccess(err)
-            setFormInfo(`${err}. David promises to fix this.`)
+            setError(err)
+            setFormInfo(`${err} (most likely David's fault)`)
             console.log('error while sending an email:', err)
         }
     }
-
+    const emoji = (() => {
+        return (
+            <span role="img" aria-label="emoji">
+                {success
+                    ? ' 😊'
+                    : error
+                    ? ' 🤖'
+                    : formInfo === 'Sending...'
+                    ? ' 🤞'
+                    : formInfo
+                    ? ' 👇'
+                    : ' 👋'}
+            </span>
+        )
+    })()
     return (
         <div className="page contact">
-            <p>
-                I absolutely love comments and feedback, come say hi!{' '}
-                <span role="img" aria-label="waving hand emoji">
-                    👋
-                </span>
-            </p>
+            <div className={error ? 'error' : ''}>
+                {formInfo ? (
+                    <p>
+                        {formInfo} {emoji}
+                    </p>
+                ) : (
+                    <p>
+                        I absolutely love comments and feedback, come say hi!
+                        {emoji}
+                    </p>
+                )}
+            </div>
             <div className="contact-form">
-                <p className={success ? 'success' : '' || error ? 'error' : ''}>
-                    {formInfo}
-                </p>
-
-                <div className="form">
+                <div className="upper-form-group">
                     <input
                         type="text"
                         name="name"
@@ -67,44 +85,44 @@ const Contact = () => {
                         onChange={e => handleChange(e)}
                     />
                 </div>
-                <input
-                    type="text"
-                    name="subject"
-                    id="subject"
-                    placeholder="subject"
-                    onChange={e => handleChange(e)}
-                />
-                <textarea
-                    name="message"
-                    id="message"
-                    placeholder="message"
-                    onChange={e => handleChange(e)}
-                ></textarea>
-                <button onClick={sendEmail}>submit</button>
+                <div className="lower-form-group">
+                    <input
+                        type="text"
+                        name="subject"
+                        id="subject"
+                        placeholder="subject"
+                        onChange={e => handleChange(e)}
+                    />
+                    <textarea
+                        name="message"
+                        id="message"
+                        placeholder="message"
+                        onChange={e => handleChange(e)}
+                    ></textarea>
+                    <button onClick={sendEmail}>submit</button>
+                </div>
             </div>
 
-            <p>
-                <img
-                    src="/icons/linkedin.svg"
-                    style={{
-                        background:
-                            'linear-gradient(to bottom, grey 0%, grey 100%)center / 80% 80% no-repeat',
-                        filter: 'invert(1)',
-                    }}
-                />
-                David Durlan
-            </p>
-            <p>
-                <img
-                    src="/icons/github.svg"
-                    style={{
-                        background:
-                            'radial-gradient(circle, grey 65%, black 0%)',
-                        filter: 'invert(1)',
-                    }}
-                />
-                david-aurel
-            </p>
+            <div className="socialmedia-wrapper">
+                <a
+                    href="https://linkedin.com/in/daviddurlan"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="socialmedia-card linkedin"
+                >
+                    <img src="/icons/linkedin.svg" />
+                    David Durlan
+                </a>
+                <a
+                    href="https://github.com/david-aurel"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="socialmedia-card github"
+                >
+                    <img src="/icons/github.svg" />
+                    david-aurel
+                </a>
+            </div>
         </div>
     )
 }
