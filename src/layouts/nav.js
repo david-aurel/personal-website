@@ -3,11 +3,13 @@ import { Link } from "gatsby"
 
 const Nav = ({ initSlider }) => {
   const [sliderState, setSliderState] = useState("")
+
   useEffect(() => {
     initSlider === ""
       ? setSliderState("slider-portfolio")
       : setSliderState(`slider-${initSlider}`)
   }, [initSlider])
+
   return (
     <nav>
       <div className="navLinks">
@@ -23,7 +25,6 @@ const Nav = ({ initSlider }) => {
             Portfolio
           </Link>
         </p>
-        {/* <div className='space'></div> */}
         <p className="navLink">
           <Link
             to="/blog"
@@ -34,7 +35,7 @@ const Nav = ({ initSlider }) => {
             Blog
           </Link>
         </p>
-        {/* <div className='space'></div> */}
+
         <p className="navLink">
           <Link
             to="/about"
@@ -45,7 +46,7 @@ const Nav = ({ initSlider }) => {
             About me
           </Link>
         </p>
-        {/* <div className='space'></div> */}
+
         <p className="navLink">
           <Link
             to="/contact"

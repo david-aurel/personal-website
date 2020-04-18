@@ -4,14 +4,14 @@ import Image from "./image"
 
 const Portfolio = ({ data }) => {
   return (
-    <div className="portfolioWrapper portfolioThumb">
+    <div className="page portfolioNav">
       {data.map((el, id) => {
         el = el.node.frontmatter
 
         return (
           <Link to={`${el.path}`} key={id}>
-            <Image alt={`${el.title} thumbnail`} filename={el.thumbnail} />
-            <p>{el.title}</p>
+            <Image alt={`${el.title}`} filename={el.thumbnail} />
+            <h3>{el.title}</h3>
             <p>{el.description}</p>
           </Link>
         )

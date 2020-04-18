@@ -9,10 +9,11 @@ export default function PortfolioTemplate({
   const { frontmatter, html } = markdownRemark
   return (
     <PageTransition>
-      <div className="portfolio-post-container">
+      <div className="page portfolio-post-container">
         <div className="portfolio-post">
           <h1>{frontmatter.title}</h1>
-          <h2>{frontmatter.date}</h2>
+          <p>{frontmatter.date}</p>
+          <h3>{frontmatter.description}</h3>
           <div
             className="portfolio-post-content"
             dangerouslySetInnerHTML={{ __html: html }}
@@ -22,13 +23,12 @@ export default function PortfolioTemplate({
     </PageTransition>
   )
 }
-export const pageQuery = graphql`
+export const portfolio = graphql`
   query($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
         title
-        path
         description
       }
     }

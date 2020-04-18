@@ -2,8 +2,8 @@ import React from "react"
 import { Link } from "gatsby"
 import { Router } from "@reach/router"
 import PageTransition from "gatsby-plugin-page-transitions"
-import SEO from "../components/seo"
 
+import SEO from "../components/seo"
 import Portfolio from "../components/portfolio"
 
 const portfolioPage = ({ data }) => {
@@ -27,9 +27,9 @@ export const query = graphql`
       edges {
         node {
           frontmatter {
-            description
-            title
             path
+            title
+            description
             thumbnail
           }
         }
