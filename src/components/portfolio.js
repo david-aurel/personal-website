@@ -10,7 +10,7 @@ const Portfolio = ({ data }) => {
 
                 return (
                     <Link to={`${el.path}`} key={id}>
-                        <div className="thumnail-text">
+                        <div className="thumbnail-text">
                             <h2>{el.title}</h2>
                             <p>{el.description}</p>
                         </div>

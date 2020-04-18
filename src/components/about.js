@@ -15,9 +15,10 @@ const About = () => {
                     Frontend Engineer. UX Enthusiast.
                 </p>
                 <p className="bold">
-                    I create responsive and intuitive web applications with a
+                    Creating responsive and intuitive web applications with a
                     dedication to aesthetics, functionality and accessibility.
                 </p>
+                <p>Based in Berlin, Germany.</p>
             </div>
         </div>
     )
