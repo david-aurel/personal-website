@@ -261,6 +261,11 @@ hr,
 hr {
     border: 1px solid lightgrey;
 }
+.portfolio-post-content img {
+    width: 100%;
+    margin: 0 auto;
+}
+
 /* about me */
 .about,
 .about-text-wrapper {
