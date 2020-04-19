@@ -47,6 +47,9 @@ p {
 .subtitle {
     font-size: 1.3rem;
 }
+.mainColor {
+    color: var(--mainColor);
+}
 
 /* nav styles for mobile */
 nav {
@@ -188,24 +191,28 @@ nav.expand .navItems {
     }
 }
 
-/* portfolio Navigation */
-.portfolioNav a {
+/* portfolio  & blog Navigation */
+.portfolioNav a,
+.blogNav a {
     display: flex;
     flex-direction: column;
     text-decoration: none;
     color: black;
     border-bottom: 1px solid var(--lightgrey);
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
 }
 .portfolioNav .gatsby-image-wrapper {
     width: 100%;
     margin-bottom: 30px;
     border-radius: var(--borderRadius);
 }
-.portfolioNav p {
-    margin-bottom: 20px;
+.portfolioNav p:first-of-type,
+.blogNav p:first-of-type {
+    margin-bottom: 10px;
 }
-.portfolioNav h2 {
+.portfolioNav h2,
+.blogNav h2 {
     margin-bottom: 10px;
 }
 
@@ -214,7 +221,6 @@ nav.expand .navItems {
     .portfolioNav a {
         flex-direction: row;
         border-bottom: 1px solid var(--lightgrey);
-        padding-bottom: 30px;
     }
     .portfolioNav .gatsby-image-wrapper {
         order: 1;
@@ -227,6 +233,11 @@ nav.expand .navItems {
     .portfolioNav .thumbnail-text {
         order: 2;
     }
+}
+
+/* blog posts */
+.blog-post h1:first-of-type {
+    margin-bottom: 5px;
 }
 
 /* about me */
@@ -296,13 +307,13 @@ nav.expand .navItems {
 .contact textarea {
     width: 100%;
     border: none;
-    border-bottom: 1px solid var(--lightgrey);
+    border-bottom: 1px solid var(--grey);
     font-size: 1.2rem;
     font-weight: 500;
 }
 .contact input::placeholder,
 .contact textarea::placeholder {
-    /* color: var(--grey); */
+    color: var(--grey);
     font-weight: 300;
     font-size: 1rem;
 }
