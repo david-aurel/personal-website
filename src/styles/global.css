@@ -235,11 +235,32 @@ nav.expand .navItems {
     }
 }
 
-/* blog posts */
-.blog-post h1:first-of-type {
+/* blog and portfolio posts */
+.portfolio-post-container,
+.blog-post-container {
+    padding-bottom: 30px;
+}
+.blog-post h1:first-of-type,
+.portfolio-post h1:first-of-type {
     margin-bottom: 5px;
 }
 
+.portfolio-post p,
+.blog-post p,
+hr,
+.portfolio-post h1,
+.portfolio-post h2,
+.portfolio-post h3,
+.portfolio-post h4,
+.blog-post h1,
+.blog-post h2,
+.blog-post h3,
+.blog-post h4 {
+    margin-bottom: 30px;
+}
+hr {
+    border: 1px solid lightgrey;
+}
 /* about me */
 .about,
 .about-text-wrapper {

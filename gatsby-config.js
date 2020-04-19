@@ -49,6 +49,12 @@ module.exports = {
             options: {
                 plugins: [
                     {
+                        resolve: `gatsby-remark-images`,
+                        options: {
+                            maxWidth: 600,
+                        },
+                    },
+                    {
                         resolve: `gatsby-remark-prismjs`,
                         options: {
                             // Class prefix for <pre> tags containing syntax highlighting;
@@ -86,20 +92,20 @@ module.exports = {
                             // existing language definition. More details on this option can be
                             // found under the header "Add new language definition or extend an
                             // existing language" below.
-                            languageExtensions: [
-                                {
-                                    language: 'superscript',
-                                    extend: 'javascript',
-                                    definition: {
-                                        superscript_types: /(SuperType)/,
-                                    },
-                                    insertBefore: {
-                                        function: {
-                                            superscript_keywords: /(superif|superelse)/,
-                                        },
-                                    },
-                                },
-                            ],
+                            // languageExtensions: [
+                            //     {
+                            //         language: 'superscript',
+                            //         extend: 'javascript',
+                            //         definition: {
+                            //             superscript_types: /(SuperType)/,
+                            //         },
+                            //         insertBefore: {
+                            //             function: {
+                            //                 superscript_keywords: /(superif|superelse)/,
+                            //             },
+                            //         },
+                            //     },
+                            // ],
                             // Customize the prompt used in shell output
                             // Values below are default
                             prompt: {
