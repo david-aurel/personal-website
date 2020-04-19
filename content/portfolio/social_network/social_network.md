@@ -1,11 +1,12 @@
 ---
-title: "Social Network"
-description: "A place to connect, chat, and have fun with you friends."
-path: "/portfolio/social-network"
-thumbnail: "social_network.jpg"
+title: 'Social Network'
+description: 'A place to connect, chat, and have fun with you friends.'
+path: '/portfolio/social-network'
+thumbnail: 'social_network.jpg'
+order: 2
 ---
 
-First time using React! It was a challenge to wrap my head around, especially later on when I started using Redux and Sockets, but it was so much fun and I'm very happy with how it turned out. 
+First time using React! It was a challenge to wrap my head around, especially later on when I started using Redux and Sockets, but it was so much fun and I'm very happy with how it turned out.
 
 ---
 
@@ -31,8 +32,6 @@ Edit your profile and add a profile picture or a bio to show your friends who yo
 
 ![img](./edit.png)
 
-
-
 ---
 
 ### Friend other users
@@ -55,9 +54,6 @@ Using the WebSocket protocol with Socket.io, a site wide live chat is available 
 
 In the front, reusable React components make use of the global Redux state and provide a pleasant, intuitive, and fast user experience.
 
-
-
 The mobile first styling in CSS may or may not look familiar, but for learning purposes it was the smartest thing one could've done 😉
 
 ---
-

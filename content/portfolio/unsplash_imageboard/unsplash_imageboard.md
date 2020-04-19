@@ -1,57 +1,34 @@
 ---
-title: "Unsplash Imageboard"
-description: "A place to enjoy beautiful images and photography of all sorts"
-path: "/portfolio/unsplash-imageboard"
-thumbnail: "react_imageboard.jpg"
+title: 'Unsplash Imageboard'
+description: 'A place to enjoy beautiful images and photography of all sorts'
+path: '/portfolio/unsplash-imageboard'
+thumbnail: 'react_imageboard.jpg'
+order: 4
 ---
 
 Live at [react-imageboard.firebaseapp.com](https://react-imageboard.firebaseapp.com) 🤖😙
 
 The webpage fetches images from the unsplash api and displays them in a grid. Users can browse, search for topics, and control display settings.
 
-
-
 ---
-
-
-
-
 
 ###Browse pictures from the unsplash api in a responsive, multi size grid
 
 The key player here is the `grid-auto-flow: dense` property and setting `object-fit: cover`. Here's a tutorial explaining the `dense` property in more detail: [css-tricks.com/the-auto-flowing-powers-of-grids-dense-keyword/](https://css-tricks.com/the-auto-flowing-powers-of-grids-dense-keyword/)
 
-
-
 ![img](./general.png)
 
-
-
 <hr>
-
-
 
 ### Search for topics
 
 A `GET` Request to the unsplash api using the input value is made.
 
-
-
 ![img](./search.png)
-
-
-
-
 
 <hr>
 
-
-
-
-
 ###Customize the grid
-
-
 
 Using root variables in the style sheet, values for grid rows, columns and gap sizes can be changed dynamically. Or toggle a `big` class on the most popular 10% of images!
 
@@ -86,8 +63,6 @@ Get a display of the error message if something went wrong, while images are loa
 ![img](./error.png)
 
 ---
-
-
 
 ## The biggest struggle?
 
