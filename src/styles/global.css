@@ -141,7 +141,7 @@ nav.expand .navItems {
     nav {
         position: relative;
         height: auto;
-        text-align: center;
+        /* text-align: center; */
         margin: 30px 0;
         transition: none;
     }
@@ -173,17 +173,17 @@ nav.expand .navItems {
         transition: 300ms;
         border-radius: var(--borderRadius);
     }
-    .slider-portfolio {
-        width: 21%;
+    .slider-about {
+        width: 23.4%;
         margin-left: 0;
     }
-    .slider-blog {
-        width: 10.5%;
-        margin-left: 29.8%;
+    .slider-portfolio {
+        width: 21%;
+        margin-left: 32%;
     }
-    .slider-about {
-        width: 24%;
-        margin-left: 48.6%;
+    .slider-blog {
+        width: 10%;
+        margin-left: 61.9%;
     }
     .slider-contact {
         width: 18.9%;
@@ -236,6 +236,7 @@ nav.expand .navItems {
 }
 
 /* blog and portfolio posts */
+
 .portfolio-post-container,
 .blog-post-container {
     padding-bottom: 30px;
@@ -265,6 +266,44 @@ hr {
     width: 100%;
     margin: 0 auto;
 }
+.portfolio-post a,
+.blog-post a {
+    display: flex;
+    align-items: center;
+    color: var(--mainColor);
+    text-decoration: none;
+    transition: transform 100ms;
+}
+.portfolio-post .url {
+    display: inline-flex;
+    margin-bottom: 20px;
+    transition: transform 150ms;
+    transform-origin: left;
+}
+.portfolio-post .url:hover {
+    transform: scale(1.0125);
+}
+.portfolio-post .url svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    color: var(--mainColor);
+}
+.back-icon {
+    display: none;
+    color: var(--mainColor);
+    text-decoration: none;
+    transition: transform 100ms;
+}
+
+/* blog and portfolio posts desktop media query */
+@media (min-width: 500px) {
+    .back-icon {
+        display: inline-block;
+        color: var(--mainColor);
+        text-decoration: none;
+    }
+}
 
 /* about me */
 .about,
@@ -275,7 +314,7 @@ hr {
 .about .gatsby-image-wrapper {
     border-radius: 50%;
     width: 100%;
-    margin-bottom: 30px;
+    margin: 0 auto 30px auto;
 }
 .about p,
 .about h1 {
@@ -294,14 +333,13 @@ hr {
     .about p,
     .about p:last-of-type,
     .about h1 {
-        margin-bottom: 0;
+        margin-bottom: 10px;
     }
     .about .gatsby-image-wrapper {
-        min-height: 200px;
-        min-width: 200px;
-        max-height: 200px;
-        max-width: 200px;
-        margin: 0 80px 0 0;
+        height: 100%;
+        width: 100%;
+        max-width: 350px;
+        margin: 0 60px 0 0;
     }
     .about-text-wrapper {
         justify-content: space-between;
@@ -317,37 +355,37 @@ hr {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* height: calc(100vh - 100px); */
+    align-items: flex-start;
+    max-width: 350px;
 }
 .contact-form {
     display: flex;
     flex-direction: column;
     margin-top: 15px;
     margin-bottom: 50px;
+    width: 100%;
 }
 .contact .formInfo {
-    text-align: center;
+    /* text-align: center; */
     margin-bottom: 20px;
 }
 .contact input,
 .contact textarea {
     width: 100%;
     border: none;
-    border-bottom: 1px solid var(--grey);
+    border-radius: var(--borderRadius);
     font-size: 1.2rem;
     font-weight: 500;
+    margin-bottom: 10px;
+    padding: 10px;
+    background: lightgrey;
+    color: black;
 }
 .contact input::placeholder,
 .contact textarea::placeholder {
     color: var(--grey);
     font-weight: 300;
     font-size: 1rem;
-}
-
-.contact input,
-.contact textarea {
-    margin-bottom: 30px;
-    padding: 10px;
 }
 
 .contact textarea {
@@ -366,6 +404,11 @@ hr {
     margin-top: var(--formMargin);
     cursor: pointer;
     padding: 10px;
+    transition: background 200ms, color 200ms;
+}
+.contact button:hover {
+    color: white;
+    background: var(--mainColor);
 }
 
 .error {
@@ -374,29 +417,29 @@ hr {
 
 /* linkedin, github links */
 .socialmedia-wrapper {
-    text-align: center;
+    width: 100%;
     border-top: 1px solid var(--lightgrey);
+    text-align: center;
+}
+.socialmedia-card-wrapper {
+    display: inline-flex;
+    flex-direction: column;
     padding: 30px 0 15px 0;
-    margin-top: 50px;
 }
 .socialmedia-card {
     color: var(--grey);
-    margin: 5px 30px;
+    margin: 10px 30px;
     display: inline-flex;
     align-items: center;
-    width: 160px;
     text-decoration: none;
     transition: transform 100ms;
 }
 .socialmedia-card:hover {
     transform: scale(1.05);
 }
-.socialmedia-card img {
-    height: 30px;
-    width: 30px;
+.socialmedia-card svg {
+    font-size: 1.5rem;
     margin-right: 10px;
-    background: radial-gradient(circle, var(--grey) 70%, var(--grey) 0%) center /
-        80% 80% no-repeat;
 }
 
 /* contact button animation */
@@ -431,15 +474,20 @@ hr {
 
 /* contact desktop media query */
 @media (min-width: 500px) {
-    .page.contact {
-        margin: 30px auto 0 auto;
-        max-width: 550px;
-        /* height: calc(100vh - 160px); */
-    }
     .contact-form {
         border-bottom: none;
     }
     .socialmedia-wrapper {
         border-top: none;
+    }
+    .socialmedia-card-wrapper {
+        display: flex;
+        flex-direction: row;
+    }
+    .socialmedia-card:first-of-type {
+        margin-left: 0;
+    }
+    .contact-form button {
+        width: 100px;
     }
 }

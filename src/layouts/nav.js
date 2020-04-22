@@ -8,7 +8,7 @@ const Nav = ({ initSlider }) => {
 
     useEffect(() => {
         initSlider === ''
-            ? setSliderState('slider-portfolio')
+            ? setSliderState('slider-about')
             : setSliderState(`slider-${initSlider}`)
     }, [initSlider])
 
@@ -17,7 +17,7 @@ const Nav = ({ initSlider }) => {
         setAnimation(!animation)
     }
 
-    const nav = ['portfolio', 'blog', 'about me', 'contact']
+    const nav = ['about me', 'portfolio', 'blog', 'contact']
     const navItems = nav.map((item, i) => {
         const minItem = item.split(' ')[0]
         const upperCaseItem = item.charAt(0).toUpperCase() + item.slice(1)

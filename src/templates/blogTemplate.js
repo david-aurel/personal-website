@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import PageTransition from 'gatsby-plugin-page-transitions'
 
 export default function blogTemplate({
@@ -9,6 +9,9 @@ export default function blogTemplate({
     const { frontmatter, html } = markdownRemark
     return (
         <PageTransition>
+            <Link to="/blog" className="back-icon">
+                Go back
+            </Link>
             <div className="page blog-post-container">
                 <div className="blog-post">
                     <h1>{frontmatter.title}</h1>
