@@ -32,6 +32,8 @@ export const query = graphql`
                         description
                         path
                         thumbnail
+                        github
+                        url
                     }
                 }
             }

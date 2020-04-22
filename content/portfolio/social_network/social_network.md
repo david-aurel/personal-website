@@ -1,9 +1,10 @@
 ---
 title: 'Social Network'
-description: 'A place to connect, chat, and have fun with you friends.'
+description: 'A place to connect and chat with your friends.'
 path: '/portfolio/social-network'
 thumbnail: 'social_network.jpg'
 order: 2
+github: 'https://github.com/david-aurel/social_network'
 ---
 
 First time using React! It was a challenge to wrap my head around, especially later on when I started using Redux and Sockets, but it was so much fun and I'm very happy with how it turned out.
@@ -52,8 +53,10 @@ Using the WebSocket protocol with Socket.io, a site wide live chat is available 
 
 ### Frontend
 
-In the front, reusable React components make use of the global Redux state and provide a pleasant, intuitive, and fast user experience.
+In the front, reusable React components make use of the global Redux state and provide a intuitive and fast user experience.
 
 The mobile first styling in CSS may or may not look familiar, but for learning purposes it was the smartest thing one could've done 😉
+
+![img](./design.png)
 
 ---

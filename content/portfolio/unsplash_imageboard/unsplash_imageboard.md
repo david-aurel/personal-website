@@ -4,9 +4,9 @@ description: 'A place to enjoy beautiful images and photography of all sorts'
 path: '/portfolio/unsplash-imageboard'
 thumbnail: 'react_imageboard.jpg'
 order: 4
+url: 'https://react-imageboard.firebaseapp.com'
+github: 'https://github.com/david-aurel/react-imageboard'
 ---
-
-Live at [react-imageboard.firebaseapp.com](https://react-imageboard.firebaseapp.com) 🤖😙
 
 The webpage fetches images from the unsplash api and displays them in a grid. Users can browse, search for topics, and control display settings.
 
@@ -73,3 +73,5 @@ Even though a library could've gotten me much better results, I'm pretty happy w
 ## The biggest success?
 
 The search functionality 😋 It's so satisfying to browse topics that come to mind and scroll through beautiful images. If I had more time, I'd implement a feature to create collections and moodboards to save the favorite images you come across 🤗
+
+---
