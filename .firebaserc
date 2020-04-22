@@ -7,6 +7,9 @@
       "hosting": {
         "test": [
           "personal-76f16"
+        ],
+        "production": [
+          "daviddurlan"
         ]
       }
     }

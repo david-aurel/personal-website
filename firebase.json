@@ -1,6 +1,6 @@
 {
     "hosting": {
-        "target": "test",
+        "target": "production",
         "public": "public",
         "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
     }
