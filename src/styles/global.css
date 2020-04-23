@@ -356,7 +356,6 @@ hr {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    max-width: 350px;
 }
 .contact-form {
     display: flex;
@@ -366,7 +365,6 @@ hr {
     width: 100%;
 }
 .contact .formInfo {
-    /* text-align: center; */
     margin-bottom: 20px;
 }
 .contact input,
@@ -383,15 +381,16 @@ hr {
 }
 .contact input::placeholder,
 .contact textarea::placeholder {
-    color: var(--grey);
+    color: black;
     font-weight: 300;
     font-size: 1rem;
 }
 
 .contact textarea {
     resize: none;
+    min-height: 40px;
     max-height: 150px;
-    margin-bottom: 40px;
+    margin-bottom: 15px;
     padding-bottom: 15px;
 }
 .contact button {
@@ -475,19 +474,19 @@ hr {
 /* contact desktop media query */
 @media (min-width: 500px) {
     .contact-form {
-        border-bottom: none;
+        max-width: 325px;
     }
     .socialmedia-wrapper {
         border-top: none;
+        max-width: 325px;
     }
     .socialmedia-card-wrapper {
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
     }
-    .socialmedia-card:first-of-type {
-        margin-left: 0;
-    }
-    .contact-form button {
-        width: 100px;
+
+    .socialmedia-card {
+        margin: 0;
     }
 }
