@@ -1,10 +1,10 @@
 ---
-title: 'Social Imageboard'
-description: 'Upload and comment blurry, shaky and accidentally captured images'
-path: '/portfolio/social-imageboard'
-thumbnail: 'image_board.jpg'
-order: 8
-github: 'https://github.com/david-aurel/image_board'
+title: Social Imageboard
+description: Upload and comment blurry, shaky and accidentally captured images
+path: /portfolio/social-imageboard
+thumbnail: image_board.jpg
+order: 7
+github: https://github.com/david-aurel/image_board
 ---
 
 First time using Vue.js! This project came to life when I realized the world was in need of more blurry, shaky, accidentally captured b-roll images. Everybody has the permission to upload or delete any picture, that guarantees there are no bad pictures on the site. The comment section underneath a picture opens a space for discussions and feedback. My plans for the future are to come up with a better branding and to deploy this.
