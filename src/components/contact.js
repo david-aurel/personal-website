@@ -30,7 +30,7 @@ const Contact = () => {
             }
 
             try {
-                const { data } = await axios.post(
+                await axios.post(
                     'https://2ny34mqbjh.execute-api.eu-central-1.amazonaws.com/prod',
                     input
                 )

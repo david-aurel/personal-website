@@ -17,26 +17,28 @@ export default function PortfolioTemplate({
                 <div className="portfolio-post">
                     <h1>{frontmatter.title}</h1>
                     <p className="italic subtitle">{frontmatter.description}</p>
-                    {frontmatter.url ? (
-                        <span className="url">
-                            <FontAwesomeIcon icon={['fas', 'globe']} />
-                            <a
-                                href={frontmatter.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                {`${frontmatter.url}`}
-                            </a>
-                        </span>
-                    ) : null}
-                    {frontmatter.github ? (
-                        <span className="url">
-                            <FontAwesomeIcon icon={['fab', 'github']} />
-                            <a
-                                href={frontmatter.github}
-                            >{`${frontmatter.github}`}</a>
-                        </span>
-                    ) : null}
+                    <div className="portfolio-links">
+                        {frontmatter.url ? (
+                            <span className="url">
+                                <FontAwesomeIcon icon={['fas', 'globe']} />
+                                <a
+                                    href={frontmatter.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    {`${frontmatter.url}`}
+                                </a>
+                            </span>
+                        ) : null}
+                        {frontmatter.github ? (
+                            <span className="url">
+                                <FontAwesomeIcon icon={['fab', 'github']} />
+                                <a
+                                    href={frontmatter.github}
+                                >{`${frontmatter.github}`}</a>
+                            </span>
+                        ) : null}
+                    </div>
                     <div
                         className="portfolio-post-content"
                         dangerouslySetInnerHTML={{ __html: html }}

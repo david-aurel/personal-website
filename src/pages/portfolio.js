@@ -1,8 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
-import { Router } from '@reach/router'
-import PageTransition from 'gatsby-plugin-page-transitions'
-
+import { graphql } from 'gatsby'
 import SEO from '../components/seo'
 import Portfolio from '../components/portfolio'
 
@@ -10,10 +7,10 @@ const portfolioPage = ({ data }) => {
     data = data.allMarkdownRemark.edges
 
     return (
-        <PageTransition>
+        <>
             <SEO title="Portfolio" />
             <Portfolio data={data} />
-        </PageTransition>
+        </>
     )
 }
 

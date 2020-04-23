@@ -274,6 +274,10 @@ hr {
     text-decoration: none;
     transition: transform 100ms;
 }
+.portfolio-post .portfolio-links {
+    display: flex;
+    flex-direction: column;
+}
 .portfolio-post .url {
     display: inline-flex;
     margin-bottom: 20px;
@@ -388,7 +392,7 @@ hr {
 
 .contact textarea {
     resize: none;
-    min-height: 40px;
+    min-height: 100px;
     max-height: 150px;
     margin-bottom: 15px;
     padding-bottom: 15px;
