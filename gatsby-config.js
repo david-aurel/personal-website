@@ -3,15 +3,9 @@ module.exports = {
         title: `David Durlan`,
         description: `David creates beautiful and intuitive web applications with a dedication to aesthetics, functionality and accessibility`,
         author: `David Durlan`,
+        image: `./images/opengraph-default.png`,
     },
     plugins: [
-        `gatsby-plugin-page-transitions`,
-        {
-            resolve: 'gatsby-plugin-page-transitions',
-            options: {
-                transitionTime: 500,
-            },
-        },
         {
             resolve: `gatsby-plugin-layout`,
             options: {
