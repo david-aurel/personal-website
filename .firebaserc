@@ -5,9 +5,6 @@
   "targets": {
     "personal-76f16": {
       "hosting": {
-        "test": [
-          "personal-76f16"
-        ],
         "production": [
           "daviddurlan"
         ]
