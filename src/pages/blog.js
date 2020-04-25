@@ -8,7 +8,7 @@ const blogPage = ({ data }) => {
 
     return (
         <>
-            <SEO title="Blog" />
+            <SEO title="Blog" image="opengraph-default.png" />
             <Blog data={data} />
         </>
     )
@@ -29,6 +29,7 @@ export const query = graphql`
                         title
                         date
                         description
+                        image
                     }
                 }
             }

@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
-import PageTransition from 'gatsby-plugin-page-transitions'
+import SEO from '../components/seo'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function PortfolioTemplate({
@@ -9,7 +9,12 @@ export default function PortfolioTemplate({
     const { markdownRemark } = data // data.markdownRemark holds your post data
     const { frontmatter, html } = markdownRemark
     return (
-        <PageTransition>
+        <>
+            <SEO
+                title={frontmatter.title}
+                description={frontmatter.description}
+                image={frontmatter.image}
+            />
             <Link to="/portfolio" className="back-icon">
                 Go back
             </Link>
@@ -45,7 +50,7 @@ export default function PortfolioTemplate({
                     />
                 </div>
             </div>
-        </PageTransition>
+        </>
     )
 }
 export const portfolio = graphql`
@@ -57,6 +62,7 @@ export const portfolio = graphql`
                 description
                 url
                 github
+                image
             }
         }
     }

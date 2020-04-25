@@ -19,15 +19,17 @@ function SEO({ description, lang, meta, title, image }) {
                         title
                         description
                         author
-                        image
                     }
                 }
             }
         `
     )
+    console.log('description', description)
 
     const metaDescription = description || site.siteMetadata.description
-    const metaImage = site.siteMetadata.image
+    const metaImage = image
+        ? `https://daviddurlan.com/static/og_images/${image}`
+        : ''
 
     return (
         <Helmet
@@ -56,6 +58,14 @@ function SEO({ description, lang, meta, title, image }) {
                 {
                     property: `og:image`,
                     content: metaImage,
+                },
+                {
+                    property: `og:image:width`,
+                    content: `1200`,
+                },
+                {
+                    property: `og:image:height`,
+                    content: `630`,
                 },
                 {
                     name: `twitter:card`,

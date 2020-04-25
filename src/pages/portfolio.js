@@ -8,7 +8,7 @@ const portfolioPage = ({ data }) => {
 
     return (
         <>
-            <SEO title="Portfolio" />
+            <SEO title="Portfolio" image="opengraph-default.png" />
             <Portfolio data={data} />
         </>
     )

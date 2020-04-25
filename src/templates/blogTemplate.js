@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 import PageTransition from 'gatsby-plugin-page-transitions'
+import SEO from '../components/seo'
 
 export default function blogTemplate({
     data, // this prop will be injected by the GraphQL query below.
@@ -8,7 +9,12 @@ export default function blogTemplate({
     const { markdownRemark } = data // data.markdownRemark holds your post data
     const { frontmatter, html } = markdownRemark
     return (
-        <PageTransition>
+        <>
+            <SEO
+                title={frontmatter.title}
+                description={frontmatter.description}
+                image={frontmatter.image}
+            />
             <Link to="/blog" className="back-icon">
                 Go back
             </Link>
@@ -23,7 +29,7 @@ export default function blogTemplate({
                     />
                 </div>
             </div>
-        </PageTransition>
+        </>
     )
 }
 export const blog = graphql`
@@ -34,6 +40,8 @@ export const blog = graphql`
                 path
                 title
                 date
+                description
+                image
             }
         }
     }
