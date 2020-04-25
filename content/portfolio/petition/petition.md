@@ -1,11 +1,12 @@
 ---
-title: 'Petition'
-description: 'Sign this petition to get me a job'
-path: '/portfolio/petition'
-thumbnail: 'petition.jpg'
+title: Petition
+description: Sign this petition to get me a job
+path: /portfolio/petition
+thumbnail: petition.jpg
 order: 5
-url: 'https://hire-me-petition.herokuapp.com'
-github: 'https://github.com/david-aurel/petition'
+url: https://hire-me-petition.herokuapp.com
+github: https://github.com/david-aurel/petition
+image: petition.png
 ---
 
 Hire me! This project marked the time where I was introduced to a more complex data flow and the dynamics of working with Node and SQL extensively.

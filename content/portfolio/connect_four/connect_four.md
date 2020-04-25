@@ -1,10 +1,11 @@
 ---
-title: 'Connect Four'
-description: 'Classic two player connect four game'
-path: '/portfolio/connect-four'
-thumbnail: 'connect_four.jpg'
+title: Connect Four
+description: Classic two player connect four game
+path: /portfolio/connect-four
+thumbnail: connect_four.jpg
 order: 3
-github: 'https://github.com/david-aurel/peppermint_code/tree/master/projects/connect_four'
+github: https://github.com/david-aurel/peppermint_code/tree/master/projects/connect_four
+image: connect_four.png
 ---
 
 ---

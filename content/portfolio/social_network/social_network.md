@@ -1,10 +1,11 @@
 ---
-title: 'Social Network'
-description: 'A place to connect and chat with your friends.'
-path: '/portfolio/social-network'
-thumbnail: 'social_network.jpg'
+title: Social Network
+description: A place to connect and chat with your friends.
+path: /portfolio/social-network
+thumbnail: social_network.jpg
 order: 2
-github: 'https://github.com/david-aurel/social_network'
+github: https://github.com/david-aurel/social_network
+image: social_network.png
 ---
 
 First time using React! It was a challenge to wrap my head around, especially later on when I started using Redux and Sockets, but it was so much fun and I'm very happy with how it turned out.

@@ -5,6 +5,7 @@ path: /portfolio/quiz
 thumbnail: fragebogen.jpg
 order: 8
 github: https://github.com/david-aurel/fragebogen
+image: quiz.png
 ---
 
 This is a response to when I was reading the book, but didn't want to have to carry around a pencil and paper at all times to answer the questions. In transforming it into a web site, users can not only answer the questions a lot more efficiently, but could potentially create a completely different set of answers in different periods of time and go back, seeing how they answered it for example a year ago versus now.
@@ -21,15 +22,11 @@ Users can browse different chapters and questions.
 
 ![img](./question.png)
 
-
-
 ---
 
-### Frontend 
+### Frontend
 
 Strict translation of the cover, text and overall layout of the original book with CSS.
-
-
 
 ![img](./answer.png)
 
@@ -40,4 +37,3 @@ Strict translation of the cover, text and overall layout of the original book wi
 ![img](./book.jpg)
 
 ---
-

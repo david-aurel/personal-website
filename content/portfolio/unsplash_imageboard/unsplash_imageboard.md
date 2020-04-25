@@ -1,11 +1,12 @@
 ---
-title: 'Unsplash Imageboard'
-description: 'A place to enjoy beautiful images and photography of all sorts'
-path: '/portfolio/unsplash-imageboard'
-thumbnail: 'react_imageboard.jpg'
+title: Unsplash Imageboard
+description: A place to enjoy beautiful images and photography of all sorts
+path: /portfolio/unsplash-imageboard
+thumbnail: react_imageboard.jpg
 order: 4
-url: 'https://react-imageboard.firebaseapp.com'
-github: 'https://github.com/david-aurel/react-imageboard'
+url: https://react-imageboard.firebaseapp.com
+github: https://github.com/david-aurel/react-imageboard
+image: unsplash_imageboard.png
 ---
 
 The webpage fetches images from the unsplash api and displays them in a grid. Users can browse, search for topics, and control display settings.
