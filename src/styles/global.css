@@ -478,7 +478,7 @@ hr {
 /* contact desktop media query */
 @media (min-width: 500px) {
     .contact-form {
-        max-width: 325px;
+        max-width: 450px;
     }
     .socialmedia-wrapper {
         border-top: none;
@@ -489,8 +489,10 @@ hr {
         flex-direction: row;
         justify-content: space-between;
     }
-
     .socialmedia-card {
         margin: 0;
+    }
+    .contact button {
+        width: 100px;
     }
 }
