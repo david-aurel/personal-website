@@ -94,6 +94,7 @@ const Contact = () => {
                     rows="1"
                 ></textarea>
                 <button
+                    className="button"
                     onClick={() => {
                         sendEmail()
                         setAnimation(!animation)

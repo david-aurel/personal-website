@@ -19,6 +19,9 @@ const About = () => {
                     dedication to aesthetics, functionality and accessibility.
                 </p>
                 <p>Based in Berlin, Germany.</p>
+                <a href="https://drive.google.com/open?id=1ymfV901wk0riGHlriq9fKTj8xbcojZbc">
+                    <button className="button">Résumé</button>
+                </a>
             </div>
         </div>
     )
