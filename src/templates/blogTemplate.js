@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
-import PageTransition from 'gatsby-plugin-page-transitions'
 import SEO from '../components/seo'
 
 export default function blogTemplate({
