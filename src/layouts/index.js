@@ -13,7 +13,9 @@ const Layout = ({ children, location }) => {
 
     return (
         <>
-            <Nav initSlider={initSlider} />
+            <header>
+                <Nav initSlider={initSlider} />
+            </header>
             <Transition location={location}>
                 <main>{children}</main>
             </Transition>

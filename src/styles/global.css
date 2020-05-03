@@ -221,7 +221,8 @@ nav.expand .navItems {
     margin: 0 auto 30px auto;
 }
 .about p,
-.about h1 {
+.about h1,
+.about h2 {
     margin-bottom: 20px;
 }
 .about p:last-of-type {
@@ -231,6 +232,10 @@ nav.expand .navItems {
 .about button {
     width: 100%;
 }
+.about h2 {
+    font-size: 20px;
+    font-weight: 400;
+}
 
 /* about media query desktop */
 @media (min-width: 500px) {
@@ -238,8 +243,7 @@ nav.expand .navItems {
         flex-direction: row;
     }
     .about p,
-    .about p:last-of-type,
-    .about h1 {
+    .about p:last-of-type {
         margin-bottom: 10px;
     }
     .about .gatsby-image-wrapper {
@@ -254,6 +258,9 @@ nav.expand .navItems {
     }
     .about p:last-of-type {
         line-height: 2rem;
+    }
+    .about button {
+        width: auto;
     }
 }
 

@@ -43,6 +43,8 @@ const Nav = ({ initSlider }) => {
                     toggleHamburger()
                 }}
                 tabIndex="0"
+                title="toggle navbar"
+                aria-label="toggle navbar"
                 animation={animation ? 1 : 0}
             />
 

@@ -18,7 +18,9 @@ const Contact = () => {
     }
 
     const sendEmail = async () => {
-        if (!success) {
+        if (formInfo === 'Sending...' || formInfo === 'Still sending...') {
+            setFormInfo('Still sending...')
+        } else if (!success) {
             setError(false)
 
             if (!input.name) {
@@ -41,6 +43,12 @@ const Contact = () => {
                 setFormInfo(`${err} (most likely David's fault)`)
                 console.log('error while sending an email:', err)
             }
+        } else if (success) {
+            setFormInfo('')
+            setSuccess(false)
+            setInput('')
+            document.querySelector('input').value = ''
+            document.querySelector('textarea').value = ''
         }
     }
     const emoji = (() => {
@@ -64,6 +72,8 @@ const Contact = () => {
             <span
                 className={`formInfo ${error ? 'error' : ''}`}
                 animation={animation ? '1' : '0'}
+                aria-live="assertive"
+                id="form-description"
             >
                 {formInfo ? (
                     <p>
@@ -76,16 +86,18 @@ const Contact = () => {
                     </p>
                 )}
             </span>
-            <div className="contact-form">
+            <form className="contact-form">
                 <input
                     type="text"
                     name="name"
+                    aria-label="Enter your name"
                     id="name"
                     placeholder="Name"
                     onChange={e => handleChange(e)}
                 />
                 <textarea
                     name="message"
+                    aria-label="Enter a message"
                     id="message"
                     placeholder="Message"
                     onChange={e => {
@@ -95,14 +107,15 @@ const Contact = () => {
                 ></textarea>
                 <button
                     className="button"
-                    onClick={() => {
+                    onClick={e => {
+                        e.preventDefault()
                         sendEmail()
                         setAnimation(!animation)
                     }}
                 >
-                    Send
+                    {success ? 'Reset' : 'Send'}
                 </button>
-            </div>
+            </form>
             <div className="socialmedia-wrapper">
                 <div className="socialmedia-card-wrapper">
                     <a

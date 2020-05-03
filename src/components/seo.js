@@ -24,8 +24,6 @@ function SEO({ description, lang, meta, title, image }) {
             }
         `
     )
-    console.log('description', description)
-
     const metaDescription = description || site.siteMetadata.description
     const metaImage = image
         ? `https://daviddurlan.com/static/og_images/${image}`

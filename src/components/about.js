@@ -6,21 +6,21 @@ const About = () => {
         <div className="page about">
             <Image
                 className="david"
-                alt="david durlan"
+                alt="david smiling"
                 filename="personal.jpg"
             />
             <div className="about-text-wrapper">
                 <h1>Hi, I'm David!</h1>
-                <p className="italic subtitle">
+                <h2 className="italic subtitle">
                     Frontend Engineer. UX Enthusiast.
-                </p>
+                </h2>
                 <p className="bold">
                     Creating responsive and intuitive web applications with a
                     dedication to aesthetics, functionality and accessibility.
                 </p>
                 <p>Based in Berlin, Germany.</p>
                 <a href="https://drive.google.com/open?id=1ymfV901wk0riGHlriq9fKTj8xbcojZbc">
-                    <button className="button">Résumé</button>
+                    <button className="button">Download Resume</button>
                 </a>
             </div>
         </div>
