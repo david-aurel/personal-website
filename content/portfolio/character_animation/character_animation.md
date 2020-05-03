@@ -17,7 +17,7 @@ It all started with an illustration following an incredible tutorial by "Cricket
 
 It looked pretty cool already, but I decided to lose the fishing rod and add a computer as well as a motor.
 
-![img](./man_v2.png)
+![img](./man_v3.jpg)
 
 From there, I started building up the different exported layers of the illustration into an HTML file and pieced it back together with CSS. All vallues are percentages, so that the size can be dynamic.
 
@@ -29,6 +29,6 @@ Using CSS `@keyframes` and `transition: transform()` extensively, I figured out 
 
 Now the guy starts off by opening the laptop, the motor starts going, driving the boat forward. At this point the animation loops and he'll go on forever. How cool is that?! 🤓🥳
 
-![img](./man_v2.gif)
+![img](./man_v3_lq.gif)
 
 ---
