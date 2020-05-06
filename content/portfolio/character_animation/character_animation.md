@@ -25,7 +25,7 @@ From there, I started building up the different exported layers of the illustrat
 
 ### Animation
 
-Using CSS `@keyframes` and `transition: transform()` extensively, I figured out what layer needed to do what and started playing with the animations. Often times, an animation plays on a parent ``, which in turn affects all children elements as well. Then, these children elements can have their own animations. Think about moving the whole body (including the arm) first, and then specifying exactly what the arm needs to do with another animation.
+Using CSS `@keyframes` and `transition: transform()` extensively, I figured out what layer needed to do what and started playing with the animations. Often times, an animation plays on a parent `<div>` element, which in turn affects all children elements as well. Then, these children elements can have their own animations. Think about moving the whole body (including the arm) first, and then specifying exactly what the arm needs to do with another animation.
 
 Now the guy starts off by opening the laptop, the motor starts going, driving the boat forward. At this point the animation loops and he'll go on forever. How cool is that?! 🤓🥳
 

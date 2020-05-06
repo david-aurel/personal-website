@@ -61,7 +61,7 @@ p {
     font-weight: bold;
     margin-top: var(--formMargin);
     cursor: pointer;
-    padding: 10px;
+    padding: 10px 20px;
     transition: background 200ms, color 200ms;
 }
 .button:hover {
@@ -231,10 +231,14 @@ nav.expand .navItems {
 }
 .about button {
     width: 100%;
+    margin-top: 20px;
 }
 .about h2 {
     font-size: 20px;
     font-weight: 400;
+}
+.about h2 span {
+    display: block;
 }
 
 /* about media query desktop */
@@ -255,12 +259,15 @@ nav.expand .navItems {
     .about-text-wrapper {
         justify-content: space-between;
         padding: 10px 0;
+        min-width: 250px;
+        max-width: 350px;
     }
     .about p:last-of-type {
         line-height: 2rem;
     }
     .about button {
         width: auto;
+        margin-top: 0;
     }
 }
 

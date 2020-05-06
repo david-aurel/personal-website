@@ -11,14 +11,16 @@ const About = () => {
             />
             <div className="about-text-wrapper">
                 <h1>Hi, I'm David!</h1>
+
                 <h2 className="italic subtitle">
                     Frontend Engineer. UX Enthusiast.
                 </h2>
-                <p className="bold">
-                    Creating responsive and intuitive web applications with a
-                    dedication to aesthetics, functionality and accessibility.
-                </p>
-                <p>Based in Berlin, Germany.</p>
+                <h2>
+                    Let's build intuitive web apps! Let's create something
+                    worthwile that makes our lives more enjoyable. Let's make it
+                    accessible. Let's have fun!
+                    <span>Let's do it together ❤️</span>
+                </h2>
                 <a href="https://drive.google.com/open?id=1ymfV901wk0riGHlriq9fKTj8xbcojZbc">
                     <button className="button">Download CV</button>
                 </a>
