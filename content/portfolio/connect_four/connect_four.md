@@ -4,6 +4,7 @@ description: Classic two player connect four game
 path: /portfolio/connect-four
 thumbnail: connect_four.jpg
 order: 3
+url: https://davids-connect-four.surge.sh
 github: https://github.com/david-aurel/peppermint_code/tree/master/projects/connect_four
 image: connect_four.png
 ---
