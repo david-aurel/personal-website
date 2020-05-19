@@ -336,7 +336,8 @@ hr,
 .blog-post h1,
 .blog-post h2,
 .blog-post h3,
-.blog-post h4 {
+.blog-post h4,
+.portfolio-post .iframe-wrapper {
     margin-bottom: 30px;
 }
 hr {
@@ -346,6 +347,34 @@ hr {
     width: 100%;
     margin: 0 auto;
 }
+.portfolio-post .iframe-wrapper {
+    position: relative;
+    border: 2px solid;
+    border-radius: var(--borderRadius);
+    padding-bottom: 20px;
+}
+.portfolio-post .iframe-wrapper .live {
+    display: inline-flex;
+    align-items: center;
+    margin: 10px 10px 0 10px;
+    padding: 10px;
+    background: white;
+    border-radius: 50%;
+}
+.portfolio-post .iframe-wrapper .live div {
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    background: red;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.portfolio-post iframe {
+    height: 100vh;
+    width: 100%;
+    border: none;
+}
 .portfolio-post a,
 .blog-post a {
     display: flex;
@@ -353,6 +382,7 @@ hr {
     color: var(--mainColor);
     text-decoration: none;
     transition: transform 100ms;
+    word-break: break-all;
 }
 .portfolio-post .portfolio-links {
     display: flex;
@@ -386,6 +416,9 @@ hr {
         display: inline-block;
         color: var(--mainColor);
         text-decoration: none;
+    }
+    .portfolio-post iframe {
+        height: 70vh;
     }
 }
 

@@ -22,6 +22,20 @@ export default function PortfolioTemplate({
                 <div className="portfolio-post">
                     <h1>{frontmatter.title}</h1>
                     <p className="italic subtitle">{frontmatter.description}</p>
+                    {frontmatter.url && (
+                        <div className="iframe-wrapper">
+                            <span className="live">
+                                <div />
+                                <span>Live</span>
+                            </span>
+                            <iframe
+                                src={frontmatter.url}
+                                title={`iframe ${frontmatter.title}`}
+                            >
+                                {' '}
+                            </iframe>
+                        </div>
+                    )}
                     <div className="portfolio-links">
                         {frontmatter.url ? (
                             <span className="url">
