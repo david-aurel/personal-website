@@ -1,7 +1,7 @@
 ---
 title: Social Network
 description: A place to connect and chat with your friends.
-path: /portfolio/social-network
+path: /projects/social-network
 thumbnail: social_network.jpg
 order: 2
 github: https://github.com/david-aurel/social_network

@@ -1,7 +1,7 @@
 ---
 title: Connect Four
 description: Classic two player connect four game
-path: /portfolio/connect-four
+path: /projects/connect-four
 thumbnail: connect_four.jpg
 order: 3
 url: https://davids-connect-four.surge.sh

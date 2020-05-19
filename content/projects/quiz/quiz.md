@@ -1,7 +1,7 @@
 ---
 title: Quiz
 description: A digitalized experience of Max Frisch's Book "Fragebogen" from 1988, a succession of philosophical questions.
-path: /portfolio/quiz
+path: /projects/quiz
 thumbnail: fragebogen.jpg
 order: 8
 github: https://github.com/david-aurel/fragebogen

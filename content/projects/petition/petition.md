@@ -1,7 +1,7 @@
 ---
 title: Petition
 description: Sign this petition to get me a job
-path: /portfolio/petition
+path: /projects/petition
 thumbnail: petition.jpg
 order: 5
 url: https://hire-me-petition.herokuapp.com

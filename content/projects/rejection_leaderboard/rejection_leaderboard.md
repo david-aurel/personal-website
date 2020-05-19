@@ -1,7 +1,7 @@
 ---
 title: Rejection Leaderboard
 description: A place to celebrate the hustle that is finding a job as a bootcamp graduate and provide motivation to keep going.
-path: /portfolio/rejection-leaderboard
+path: /projects/rejection-leaderboard
 thumbnail: rejection_leaderboard.jpg
 order: 6
 url: https://rejection-leaderboard.firebaseapp.com

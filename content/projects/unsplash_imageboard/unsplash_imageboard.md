@@ -1,7 +1,7 @@
 ---
 title: Unsplash Imageboard
 description: A place to enjoy beautiful images and photography of all sorts
-path: /portfolio/unsplash-imageboard
+path: /projects/unsplash-imageboard
 thumbnail: react_imageboard.jpg
 order: 4
 url: https://react-imageboard.firebaseapp.com

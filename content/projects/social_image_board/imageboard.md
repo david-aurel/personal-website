@@ -1,7 +1,7 @@
 ---
 title: Social Imageboard
 description: Upload and comment blurry, shaky and accidentally captured images
-path: /portfolio/social-imageboard
+path: /projects/social-imageboard
 thumbnail: image_board.jpg
 order: 7
 github: https://github.com/david-aurel/social_image_board

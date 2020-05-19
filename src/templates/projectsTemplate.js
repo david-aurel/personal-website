@@ -3,7 +3,7 @@ import { graphql, Link } from 'gatsby'
 import SEO from '../components/seo'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-export default function PortfolioTemplate({
+export default function ProjectsTemplate({
     data, // this prop will be injected by the GraphQL query below.
 }) {
     const { markdownRemark } = data // data.markdownRemark holds your post data
@@ -15,11 +15,11 @@ export default function PortfolioTemplate({
                 description={frontmatter.description}
                 image={frontmatter.image}
             />
-            <Link to="/portfolio" className="back-icon">
+            <Link to="/projects" className="back-icon">
                 Go back
             </Link>
-            <div className="page portfolio-post-container">
-                <div className="portfolio-post">
+            <div className="page projects-post-container">
+                <div className="projects-post">
                     <h1>{frontmatter.title}</h1>
                     <p className="italic subtitle">{frontmatter.description}</p>
                     {frontmatter.url && (
@@ -36,7 +36,7 @@ export default function PortfolioTemplate({
                             </iframe>
                         </div>
                     )}
-                    <div className="portfolio-links">
+                    <div className="projects-links">
                         {frontmatter.url ? (
                             <span className="url">
                                 <FontAwesomeIcon icon={['fas', 'globe']} />
@@ -59,7 +59,7 @@ export default function PortfolioTemplate({
                         ) : null}
                     </div>
                     <div
-                        className="portfolio-post-content"
+                        className="projects-post-content"
                         dangerouslySetInnerHTML={{ __html: html }}
                     />
                 </div>
@@ -67,7 +67,7 @@ export default function PortfolioTemplate({
         </>
     )
 }
-export const portfolio = graphql`
+export const projects = graphql`
     query($path: String!) {
         markdownRemark(frontmatter: { path: { eq: $path } }) {
             html

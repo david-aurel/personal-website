@@ -2,9 +2,9 @@ import React from 'react'
 import { Link } from 'gatsby'
 import Image from './image'
 
-const Portfolio = ({ data }) => {
+const Projects = ({ data }) => {
     return (
-        <div className="page portfolioNav">
+        <div className="page projectsNav">
             {data.map((el, id) => {
                 el = el.node.frontmatter
 
@@ -26,4 +26,4 @@ const Portfolio = ({ data }) => {
     )
 }
 
-export default Portfolio
+export default Projects

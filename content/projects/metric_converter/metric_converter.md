@@ -1,7 +1,7 @@
 ---
 title: Metric Converter
 description: A tool to convert units like km, miles, liter, cups, ˚C, ˚F, € and $.
-path: /portfolio/metric-converter
+path: /projects/metric-converter
 thumbnail: converter.jpg
 order: 9
 url: https://europe-us-converter.herokuapp.com/

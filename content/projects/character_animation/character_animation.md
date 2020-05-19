@@ -1,7 +1,7 @@
 ---
 title: Character Animation
 description: Bringing a cartoon character to life
-path: /portfolio/character-animation
+path: /projects/character-animation
 thumbnail: character_animation.jpg
 order: 1
 url: https://david-ahoy.surge.sh

@@ -63,6 +63,7 @@ p {
     cursor: pointer;
     padding: 10px 20px;
     transition: background 200ms, color 200ms;
+    text-decoration: none;
 }
 .button:hover {
     color: white;
@@ -195,7 +196,7 @@ nav.expand .navItems {
         width: 23.4%;
         margin-left: 0;
     }
-    .slider-portfolio {
+    .slider-projects {
         width: 21%;
         margin-left: 32%;
     }
@@ -229,9 +230,10 @@ nav.expand .navItems {
     line-height: 1.8rem;
     margin-bottom: 50px;
 }
-.about button {
+.about .button {
     width: 100%;
     margin-top: 20px;
+    text-align: center;
 }
 .about h2 {
     font-size: 20px;
@@ -265,14 +267,15 @@ nav.expand .navItems {
     .about p:last-of-type {
         line-height: 2rem;
     }
-    .about button {
-        width: auto;
+    .about .button {
+        display: inline-block;
         margin-top: 0;
+        width: 140px;
     }
 }
 
-/* portfolio  & blog Navigation */
-.portfolioNav a,
+/* projects  & blog Navigation */
+.projectsNav a,
 .blogNav a {
     display: flex;
     flex-direction: column;
@@ -282,27 +285,27 @@ nav.expand .navItems {
     margin-bottom: 20px;
     padding-bottom: 20px;
 }
-.portfolioNav .gatsby-image-wrapper {
+.projectsNav .gatsby-image-wrapper {
     width: 100%;
     margin-bottom: 30px;
     border-radius: var(--borderRadius);
 }
-.portfolioNav p:first-of-type,
+.projectsoNav p:first-of-type,
 .blogNav p:first-of-type {
     margin-bottom: 10px;
 }
-.portfolioNav h2,
+.projectsNav h2,
 .blogNav h2 {
     margin-bottom: 10px;
 }
 
-/* portfolio desktop media query */
+/* projects desktop media query */
 @media (min-width: 500px) {
-    .portfolioNav a {
+    .projectsNav a {
         flex-direction: row;
         border-bottom: 1px solid var(--lightgrey);
     }
-    .portfolioNav .gatsby-image-wrapper {
+    .projectsNav .gatsby-image-wrapper {
         order: 1;
         min-width: 200px;
         width: 200px;
@@ -310,50 +313,50 @@ nav.expand .navItems {
         margin-bottom: 0;
         border-radius: var(--borderRadius);
     }
-    .portfolioNav .thumbnail-text {
+    .projectsNav .thumbnail-text {
         order: 2;
     }
 }
 
-/* blog and portfolio posts */
+/* blog and projects posts */
 
-.portfolio-post-container,
+.projects-post-container,
 .blog-post-container {
     padding-bottom: 30px;
 }
 .blog-post h1:first-of-type,
-.portfolio-post h1:first-of-type {
+.projects-post h1:first-of-type {
     margin-bottom: 5px;
 }
 
-.portfolio-post p,
+.projects-post p,
 .blog-post p,
 hr,
-.portfolio-post h1,
-.portfolio-post h2,
-.portfolio-post h3,
-.portfolio-post h4,
+.projects-post h1,
+.projects-post h2,
+.projects-post h3,
+.projects-post h4,
 .blog-post h1,
 .blog-post h2,
 .blog-post h3,
 .blog-post h4,
-.portfolio-post .iframe-wrapper {
+.projects-post .iframe-wrapper {
     margin-bottom: 30px;
 }
 hr {
     border: 1px solid lightgrey;
 }
-.portfolio-post-content img {
+.projects-post-content img {
     width: 100%;
     margin: 0 auto;
 }
-.portfolio-post .iframe-wrapper {
+.projects-post .iframe-wrapper {
     position: relative;
     border: 2px solid;
     border-radius: var(--borderRadius);
     padding-bottom: 20px;
 }
-.portfolio-post .iframe-wrapper .live {
+.projects-post .iframe-wrapper .live {
     display: inline-flex;
     align-items: center;
     margin: 10px 10px 0 10px;
@@ -361,7 +364,7 @@ hr {
     background: white;
     border-radius: 50%;
 }
-.portfolio-post .iframe-wrapper .live div {
+.projects-post .iframe-wrapper .live div {
     display: inline-block;
     height: 15px;
     width: 15px;
@@ -370,12 +373,12 @@ hr {
     margin-right: 5px;
 }
 
-.portfolio-post iframe {
+.projects-post iframe {
     height: 100vh;
     width: 100%;
     border: none;
 }
-.portfolio-post a,
+.projects-post a,
 .blog-post a {
     display: flex;
     align-items: center;
@@ -384,20 +387,20 @@ hr {
     transition: transform 100ms;
     word-break: break-all;
 }
-.portfolio-post .portfolio-links {
+.projects-post .projects-links {
     display: flex;
     flex-direction: column;
 }
-.portfolio-post .url {
+.projects-post .url {
     display: inline-flex;
     margin-bottom: 20px;
     transition: transform 150ms;
     transform-origin: left;
 }
-.portfolio-post .url:hover {
+.projects-post .url:hover {
     transform: scale(1.0125);
 }
-.portfolio-post .url svg {
+.projects-post .url svg {
     width: 20px;
     height: 20px;
     margin-right: 10px;
@@ -410,14 +413,14 @@ hr {
     transition: transform 100ms;
 }
 
-/* blog and portfolio posts desktop media query */
+/* blog and projects posts desktop media query */
 @media (min-width: 500px) {
     .back-icon {
         display: inline-block;
         color: var(--mainColor);
         text-decoration: none;
     }
-    .portfolio-post iframe {
+    .projects-post iframe {
         height: 70vh;
     }
 }

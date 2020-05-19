@@ -17,7 +17,7 @@ const Nav = ({ initSlider }) => {
         setAnimation(!animation)
     }
 
-    const nav = ['about me', 'portfolio', 'blog', 'contact']
+    const nav = ['about me', 'projects', 'blog', 'contact']
     const navItems = nav.map((item, i) => {
         const minItem = item.split(' ')[0]
         const upperCaseItem = item.charAt(0).toUpperCase() + item.slice(1)
