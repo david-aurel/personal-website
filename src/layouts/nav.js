@@ -38,16 +38,17 @@ const Nav = ({ initSlider }) => {
     return (
         <nav className={hamburgerState ? 'expand' : ''}>
             <button
-                className={`hamburger ${hamburgerState ? 'on' : ''}`}
+                className={`hamburger ${hamburgerState ? 'active' : ''}`}
                 onClick={() => {
                     toggleHamburger()
                 }}
                 tabIndex="0"
                 title="toggle navbar"
                 aria-label="toggle navbar"
-                animation={animation ? 1 : 0}
-            />
-
+            >
+                <span></span>
+                <span></span>
+            </button>
             <div className="navItems">
                 <div className={`slider ${sliderState}`} />
                 {navItems}
