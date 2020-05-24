@@ -5,8 +5,6 @@ import Projects from '../components/projects'
 
 const projectsPage = ({ data }) => {
     data = data.allMarkdownRemark.edges
-    console.log(data)
-
     return (
         <>
             <SEO title="Projects" image="opengraph-default.png" />
