@@ -27,7 +27,7 @@ function SEO({ description, lang, meta, title, image }) {
     const metaDescription = description || site.siteMetadata.description
     const metaImage = image
         ? `https://daviddurlan.com/static/og_images/${image}`
-        : ''
+        : 'https://daviddurlan.com/static/og_images/opengraph_default.png'
 
     return (
         <Helmet
@@ -54,7 +54,7 @@ function SEO({ description, lang, meta, title, image }) {
                     content: `website`,
                 },
                 {
-                    property: `og:image`,
+                    property: `og:image:url`,
                     content: metaImage,
                 },
                 {

@@ -4,7 +4,7 @@ import Contact from '../components/contact'
 
 const contactPage = ({ data }) => (
     <>
-        <SEO title="Contact" image="opengraph-default.png" />
+        <SEO title="Contact" image="opengraph_default.png" />
         <Contact />
     </>
 )

@@ -4,7 +4,7 @@ import About from '../components/about'
 
 const aboutPage = () => (
     <>
-        <SEO title="About me" image="opengraph-default.png" />
+        <SEO title="About me" image="opengraph_default.png" />
         <About />
     </>
 )

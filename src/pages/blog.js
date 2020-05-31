@@ -8,7 +8,7 @@ const blogPage = ({ data }) => {
 
     return (
         <>
-            <SEO title="Blog" image="opengraph-default.png" />
+            <SEO title="Blog" image="opengraph_default.png" />
             <Blog data={data} />
         </>
     )

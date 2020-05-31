@@ -7,7 +7,7 @@ const projectsPage = ({ data }) => {
     data = data.allMarkdownRemark.edges
     return (
         <>
-            <SEO title="Projects" image="opengraph-default.png" />
+            <SEO title="Projects" image="opengraph_default.png" />
             <Projects data={data} />
         </>
     )

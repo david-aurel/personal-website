@@ -6,7 +6,7 @@ const IndexPage = () => {
     useEffect(() => {
         navigate('/about')
     })
-    return <SEO title="David Durlan" image="opengraph-default.png" />
+    return <SEO title="David Durlan" image="opengraph_default.png" />
 }
 
 export default IndexPage
