@@ -105,6 +105,7 @@ const Contact = () => {
                     }}
                     rows="1"
                 ></textarea>
+
                 <button
                     className="button"
                     onClick={e => {
@@ -116,27 +117,26 @@ const Contact = () => {
                     {success ? 'Reset' : 'Send'}
                 </button>
             </form>
+            <p>Or, find me here:</p>
             <div className="socialmedia-wrapper">
-                <div className="socialmedia-card-wrapper">
-                    <a
-                        href="https://linkedin.com/in/daviddurlan"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="socialmedia-card linkedin"
-                    >
-                        <FontAwesomeIcon icon={['fab', 'linkedin']} />
-                        David Durlan
-                    </a>
-                    <a
-                        href="https://github.com/david-aurel"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="socialmedia-card github"
-                    >
-                        <FontAwesomeIcon icon={['fab', 'github']} />
-                        david-aurel
-                    </a>
-                </div>
+                <a
+                    href="https://linkedin.com/in/daviddurlan"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="socialmedia-card linkedin"
+                >
+                    <FontAwesomeIcon icon={['fab', 'linkedin']} />
+                    David Durlan
+                </a>
+                <a
+                    href="https://github.com/david-aurel"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="socialmedia-card github"
+                >
+                    <FontAwesomeIcon icon={['fab', 'github']} />
+                    david-aurel
+                </a>
             </div>
         </div>
     )

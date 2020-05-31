@@ -11,9 +11,10 @@
     --mainColor: #020289;
     --grey: #595959;
     --lightgrey: #949494;
-    --hamburgerItemsSize: 1.5rem;
-    --navItemsSize: 1.2rem;
+    --hamburgerItemsSize: 2rem;
+    --navItemsSize: 1.4rem;
     --borderRadius: 10px;
+    --border: 3px solid var(--mainColor);
 }
 
 body {
@@ -53,11 +54,11 @@ p {
 
 /* general button */
 .button {
-    background: white;
-    border: 2px solid var(--mainColor);
+    background: var(--mainColor);
+    border: 3px solid var(--mainColor);
     border-radius: var(--borderRadius);
-    color: var(--mainColor);
-    font-size: 1rem;
+    color: white;
+    font-size: 1.2rem;
     font-weight: bold;
     margin-top: var(--formMargin);
     cursor: pointer;
@@ -65,9 +66,34 @@ p {
     transition: background 200ms, color 200ms;
     text-decoration: none;
 }
-.button:hover {
+.button a {
+    text-decoration: none;
     color: white;
-    background: var(--mainColor);
+}
+.button:hover {
+    color: var(--mainColor);
+    background: white;
+}
+.button:hover a {
+    color: var(--mainColor);
+}
+
+/* inverse button colors for desktop */
+@media (min-width: 500px) {
+    .button {
+        background: white;
+        color: var(--mainColor);
+    }
+    .button a {
+        color: var(--mainColor);
+    }
+    .button:hover {
+        color: white;
+        background: var(--mainColor);
+    }
+    .button:hover a {
+        color: white;
+    }
 }
 
 /* nav styles for mobile */
@@ -75,7 +101,7 @@ nav {
     position: relative;
     height: 50px;
     transition: height 300ms;
-    margin: 20px 0 10px 0;
+    margin: 30px 0 10px 0;
 }
 .navItems {
     display: flex;
@@ -94,30 +120,25 @@ nav a {
     margin: 15px 0;
     transition: opacity 300ms, visibility 0s 300ms;
 }
-/* .hamburger {
+
+.burger-wrapper {
+    /* width is always height* 0.67 */
+    width: 50px;
+    height: 33.5px;
+    text-align: center;
     position: absolute;
-    top: 0;
     right: 0;
-    width: 50px;
-    height: 30px;
-    background: url('../../public/icons/hamburger.svg') center / contain
-        no-repeat;
-    border: none;
 }
-.hamburger.active {
-    background: url('../../public/icons/exit.svg') center / contain no-repeat;
-} */
+
 .hamburger {
-    /* width is always height*2 */
-    height: 25px;
-    width: 50px;
+    height: 100%;
+    width: 100%;
     padding: 0;
     border: 0;
     cursor: pointer;
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: none;
+    position: relative;
+    transition: 200ms;
+    background: transparent;
 }
 
 .hamburger span {
@@ -127,7 +148,7 @@ nav a {
     height: 20%;
     background: #020289;
     position: absolute;
-    transition: 200ms ease-in-out;
+    transition: 200ms;
     transform: rotate(0deg);
     border-radius: 50px;
 }
@@ -142,13 +163,21 @@ nav a {
     left: 0;
 }
 
-.active.hamburger span:nth-child(1) {
-    transform: rotate(34deg);
-    right: 4%;
+.hamburger.active {
+    width: 67%;
+    /*   background: green; */
 }
-.active.hamburger span:nth-child(2) {
-    transform: rotate(-34deg);
-    left: 21%;
+.hamburger.active span {
+    width: 121%;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg);
+    right: -35%;
+}
+.hamburger.active span:nth-child(2) {
+    transform: rotate(-45deg);
+    left: 14%;
 }
 
 nav.expand {
@@ -201,26 +230,26 @@ nav.expand .navItems {
         display: inline-block;
         position: absolute;
         bottom: 0;
-        height: 2px;
+        height: 4px;
         background: var(--mainColor);
         transition: 300ms;
-        border-radius: var(--borderRadius);
+        border-radius: 20px;
     }
     .slider-about {
-        width: 23.4%;
+        width: 27.8%;
         margin-left: 0;
     }
     .slider-projects {
-        width: 21%;
+        width: 24%;
         margin-left: 32%;
     }
     .slider-blog {
-        width: 10%;
-        margin-left: 61.9%;
+        width: 12.5%;
+        margin-left: 60.5%;
     }
     .slider-contact {
-        width: 18.9%;
-        margin-left: 81.3%;
+        width: 22%;
+        margin-left: 78%;
     }
 }
 
@@ -277,14 +306,15 @@ nav.expand .navItems {
         padding: 10px 0;
         min-width: 250px;
         max-width: 350px;
+        align-items: flex-start;
     }
     .about p:last-of-type {
         line-height: 2rem;
     }
     .about .button {
+        width: auto;
         display: inline-block;
         margin-top: 0;
-        width: 140px;
     }
 }
 
@@ -295,8 +325,8 @@ nav.expand .navItems {
     flex-direction: column;
     text-decoration: none;
     color: black;
-    border-bottom: 1px solid var(--lightgrey);
-    margin-bottom: 20px;
+    border-bottom: var(--border);
+    margin-bottom: 40px;
     padding-bottom: 20px;
 }
 .projectsNav .gatsby-image-wrapper {
@@ -312,12 +342,19 @@ nav.expand .navItems {
 .blogNav h2 {
     margin-bottom: 10px;
 }
+.thumbnail-text p {
+    margin-bottom: 20px;
+}
 
 /* projects desktop media query */
 @media (min-width: 500px) {
     .projectsNav a {
         flex-direction: row;
-        border-bottom: 1px solid var(--lightgrey);
+        margin-bottom: 20px;
+    }
+    .projectsNav a,
+    .blogNav a {
+        border: none;
     }
     .projectsNav .gatsby-image-wrapper {
         order: 1;
@@ -453,6 +490,16 @@ hr {
     margin-bottom: 50px;
     width: 100%;
 }
+
+.contact-inputs {
+    border-radius: var(--borderRadius);
+    overflow: hidden;
+    padding: 15px;
+    margin-bottom: 23px;
+    background-size: 250%;
+    background-position: 45% 25%;
+    background-repeat: no-repeat;
+}
 .contact .formInfo {
     margin-bottom: 20px;
 }
@@ -460,19 +507,22 @@ hr {
 .contact textarea {
     width: 100%;
     border: none;
-    border-radius: var(--borderRadius);
     font-size: 1.2rem;
     font-weight: 500;
     margin-bottom: 10px;
     padding: 10px;
-    background: lightgrey;
     color: black;
+    position: relative;
+    border: 3px solid var(--mainColor);
+    border-radius: var(--borderRadius);
+    -webkit-appearance: none;
 }
+.contact input,
+.contact textarea,
 .contact input::placeholder,
 .contact textarea::placeholder {
-    color: black;
-    font-weight: 300;
-    font-size: 1rem;
+    font-size: 1.2rem;
+    color: var(--mainColor);
 }
 
 .contact textarea {
@@ -490,21 +540,20 @@ hr {
 /* linkedin, github links */
 .socialmedia-wrapper {
     width: 100%;
-    border-top: 1px solid var(--lightgrey);
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 0;
+    flex-wrap: wrap;
 }
-.socialmedia-card-wrapper {
-    display: inline-flex;
-    flex-direction: column;
-    padding: 30px 0 15px 0;
-}
+
 .socialmedia-card {
-    color: var(--grey);
-    margin: 10px 30px;
+    color: black;
     display: inline-flex;
     align-items: center;
     text-decoration: none;
     transition: transform 100ms;
+    margin: 10px 0;
 }
 .socialmedia-card:hover {
     transform: scale(1.05);
@@ -546,20 +595,8 @@ hr {
 
 /* contact desktop media query */
 @media (min-width: 500px) {
-    .contact-form {
-        max-width: 450px;
-    }
     .socialmedia-wrapper {
-        border-top: none;
         max-width: 325px;
-    }
-    .socialmedia-card-wrapper {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    .socialmedia-card {
-        margin: 0;
     }
     .contact button {
         width: 100px;

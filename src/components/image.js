@@ -38,6 +38,7 @@ const Image = ({ filename, alt }) => {
         return n.node.relativePath.includes(filename)
     })
     if (!image) {
+        console.log('image not found')
         return null
     } else {
         return <Img fluid={image.node.childImageSharp.fluid} alt={alt} />

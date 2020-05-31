@@ -21,12 +21,11 @@ const About = () => {
                     accessible. Let's have fun!
                     <span>Let's do it together ❤️</span>
                 </h2>
-                <a
-                    href="https://drive.google.com/open?id=1ymfV901wk0riGHlriq9fKTj8xbcojZbc"
-                    className="button"
-                >
-                    Download CV
-                </a>
+                <button className="button">
+                    <a href="https://drive.google.com/open?id=1ymfV901wk0riGHlriq9fKTj8xbcojZbc">
+                        Download CV
+                    </a>
+                </button>
             </div>
         </div>
     )
