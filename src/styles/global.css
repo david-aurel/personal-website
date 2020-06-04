@@ -230,7 +230,7 @@ nav.expand .navItems {
         display: inline-block;
         position: absolute;
         bottom: 0;
-        height: 4px;
+        height: 3px;
         background: var(--mainColor);
         transition: 300ms;
         border-radius: 20px;
