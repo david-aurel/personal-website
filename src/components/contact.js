@@ -114,7 +114,11 @@ const Contact = () => {
                         setAnimation(!animation)
                     }}
                 >
-                    {success ? 'Reset' : 'Send'}
+                    {success ? (
+                        'Reset'
+                    ) : (
+                        <FontAwesomeIcon icon={['fa', 'paper-plane']} />
+                    )}
                 </button>
             </form>
             <p>Or, find me here:</p>
