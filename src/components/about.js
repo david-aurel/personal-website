@@ -26,7 +26,7 @@ const About = () => {
                     className="button"
                     href="https://drive.google.com/open?id=1ymfV901wk0riGHlriq9fKTj8xbcojZbc"
                 >
-                    Download CV
+                    Resume
                 </a>
             </div>
         </div>
