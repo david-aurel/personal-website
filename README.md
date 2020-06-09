@@ -1,6 +1,6 @@
 # Personal Website / Blog / Portfolio
 
-built with React, Gatsby and CSS.
+built with Gatsby.
 
 [daviddurlan.com](https://daviddurlan.com)
 
