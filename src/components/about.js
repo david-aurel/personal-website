@@ -16,15 +16,16 @@ const About = () => {
                     Frontend Engineer. UX Enthusiast.
                 </h2>
                 <h2>
-                    Let's build intuitive web apps! Let's create something
-                    worthwile that makes our lives more enjoyable. Let's make it
-                    accessible. Let's have fun!
+                    Let's build intuitive, functional, responsive and aesthetic
+                    web apps. Let's create something worthwhile that makes our
+                    lives more enjoyable. Let's make it accessible. Let's have
+                    fun!
                     <span>Let's do it together ❤️</span>
                 </h2>
 
                 <a
                     className="button"
-                    href="https://drive.google.com/open?id=1ymfV901wk0riGHlriq9fKTj8xbcojZbc"
+                    href="https://drive.google.com/file/d/1BH7uf5ls8I7pcpljlv782PjjbO4jH335/view?usp=sharing"
                 >
                     Resume
                 </a>
