@@ -25,7 +25,7 @@ const About = () => {
 
                 <a
                     className="button"
-                    href="https://drive.google.com/file/d/1BH7uf5ls8I7pcpljlv782PjjbO4jH335/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1B7RhW__FdcxayaTsroQGYLSOERInDAhj/view?usp=sharing"
                 >
                     Resume
                 </a>
